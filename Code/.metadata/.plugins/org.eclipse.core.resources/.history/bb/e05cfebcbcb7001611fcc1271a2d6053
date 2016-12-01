@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_djy5cLe6EeaH071aJO2UFw" name="RootElement">
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_dr00ELe6EeaH071aJO2UFw" name="StateMachine1">
+    <region xmi:type="uml:Region" xmi:id="_duu-ILe6EeaH071aJO2UFw" name="Region1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_dvDHMLe6EeaH071aJO2UFw" name="Interaction1"/>
+</uml:Model>
