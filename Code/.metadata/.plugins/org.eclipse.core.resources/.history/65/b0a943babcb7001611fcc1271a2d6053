@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Sw3F4Le7EeaH071aJO2UFw" type="PapyrusUMLProfileDiagram" name="Profile Diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:StringValueStyle" xmi:id="_Sw3F4be7EeaH071aJO2UFw" name="diagram_compatibility_version" stringValue="1.2.0"/>
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_Sw3F4re7EeaH071aJO2UFw"/>
-  <styles xmi:type="style:PapyrusViewStyle" xmi:id="_Sw3F47e7EeaH071aJO2UFw">
-    <owner xmi:type="uml:Profile" href="TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
-  </styles>
-  <element xmi:type="uml:Profile" href="TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
-</notation:Diagram>

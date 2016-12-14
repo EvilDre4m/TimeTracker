@@ -7,6 +7,13 @@
     <region xmi:type="uml:Region" xmi:id="_duu-ILe6EeaH071aJO2UFw" name="Region1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_dvDHMLe6EeaH071aJO2UFw" name="Interaction1"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_d0Vq4MICEeaJ48JiJ_kfAw" name="at.fhv.TimeTracker">
+    <packagedElement xmi:type="uml:Class" xmi:id="_hJC84MICEeaJ48JiJ_kfAw" name="Main">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_deqgYMIDEeaJ48JiJ_kfAw" name="test">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zEMN4Le8EeaH071aJO2UFw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zEPRMLe8EeaH071aJO2UFw" source="PapyrusVersion">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRMbe8EeaH071aJO2UFw" key="Version" value="0.0.1"/>

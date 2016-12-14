@@ -7,12 +7,12 @@
 <stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/TimeTrackerUml/TimeTracker.uml"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/Generated/src"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/at.fhv.example.TimeTracker/src/at/fhv/example/TimeTracker/main/Generate.java"/>
+<listEntry value="/at.fhv.example.TimeTracker/src/at/fhv/TimeTracker/common/Generate.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="at.fhv.example.TimeTracker.main.Generate"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Users/Tobias/workspace/workspace_neon/TimeTrackerUml/TimeTracker.uml&quot; &quot;C:/Users/Tobias/workspace/workspace_neon/Generated/src&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="at.fhv.TimeTracker.common.Generate"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Users/Tobias/Documents/TimeTracker/Code/TimeTrackerUml/TimeTracker.uml&quot; &quot;C:/Users/Tobias/Documents/TimeTracker/Code/Generated/src&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="at.fhv.example.TimeTracker"/>
 </launchConfiguration>

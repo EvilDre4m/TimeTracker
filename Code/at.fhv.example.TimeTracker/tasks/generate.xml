@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="at.fhv.example.TimeTracker">
-    <property name="ECLIPSE_HOME" value="../../../../eclipse/modeling-neon/eclipse"/>
+    <property name="ECLIPSE_HOME" value="../../../../../eclipse/modeling-neon/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
@@ -24,7 +24,7 @@
 
     <!-- The default task with the jars used by this project -->
     <target name="generate">
-        <java classname="at.fhv.example.TimeTracker.main.Generate" classpathref="at.fhv.example.TimeTracker.classpath">
+        <java classname="at.fhv.TimeTracker.common.Generate" classpathref="at.fhv.example.TimeTracker.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -35,7 +35,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="generate.alljars">
-        <java classname="at.fhv.example.TimeTracker.main.Generate" classpathref="at.fhv.example.TimeTracker.classpath">
+        <java classname="at.fhv.TimeTracker.common.Generate" classpathref="at.fhv.example.TimeTracker.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_SwmnMLe7EeaH071aJO2UFw" name="RootElement" metaclassReference="_rA33sLe8EeaH071aJO2UFw">
   <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uYt9QLe8EeaH071aJO2UFw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_2d3v8MIDEeaJ48JiJ_kfAw" name="RootElement" nsURI="http:///schemas/RootElement/_2d0soMIDEeaJ48JiJ_kfAw/2" nsPrefix="RootElement">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2d6MMMIDEeaJ48JiJ_kfAw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2d6MMcIDEeaJ48JiJ_kfAw" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2d6MMsIDEeaJ48JiJ_kfAw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2d6MM8IDEeaJ48JiJ_kfAw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2d6MNMIDEeaJ48JiJ_kfAw" key="Date" value="2016-12-14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2d6MNcIDEeaJ48JiJ_kfAw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_2d3v8cIDEeaJ48JiJ_kfAw" name="JavaBean">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2d3v8sIDEeaJ48JiJ_kfAw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_BmnVgLe9EeaH071aJO2UFw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_2d3v88IDEeaJ48JiJ_kfAw" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_ITtfoLe9EeaH071aJO2UFw" name="RootElement" nsURI="http:///schemas/RootElement/_ITs4kLe9EeaH071aJO2UFw/1" nsPrefix="RootElement">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ITuGsbe9EeaH071aJO2UFw" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ITuGsre9EeaH071aJO2UFw" key="Version" value="0.0.2"/>
@@ -29,12 +44,12 @@
   <elementImport xmi:type="uml:ElementImport" xmi:id="_rA33sLe8EeaH071aJO2UFw" alias="Class">
     <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
   </elementImport>
-  <packagedElement xmi:type="uml:Stereotype" xmi:id="_BmnVgLe9EeaH071aJO2UFw" name="liuui">
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_BmnVgLe9EeaH071aJO2UFw" name="JavaBean">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_HTv3cLe9EeaH071aJO2UFw" name="base_Class" association="_HTnUkLe9EeaH071aJO2UFw">
       <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Extension" xmi:id="_HTnUkLe9EeaH071aJO2UFw" name="E_liuui_Class1" memberEnd="_HTuCQLe9EeaH071aJO2UFw _HTv3cLe9EeaH071aJO2UFw">
-    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_HTuCQLe9EeaH071aJO2UFw" name="extension_liuui" type="_BmnVgLe9EeaH071aJO2UFw" aggregation="composite" association="_HTnUkLe9EeaH071aJO2UFw"/>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_HTnUkLe9EeaH071aJO2UFw" name="E_JavaBean_Class1" memberEnd="_HTuCQLe9EeaH071aJO2UFw _HTv3cLe9EeaH071aJO2UFw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_HTuCQLe9EeaH071aJO2UFw" name="extension_JavaBean" type="_BmnVgLe9EeaH071aJO2UFw" aggregation="composite" association="_HTnUkLe9EeaH071aJO2UFw"/>
   </packagedElement>
 </uml:Profile>

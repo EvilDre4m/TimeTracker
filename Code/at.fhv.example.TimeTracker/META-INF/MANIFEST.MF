@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo TimeTracker Module Runtime Plug-in
 Bundle-SymbolicName: at.fhv.example.TimeTracker
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: at.fhv.example.TimeTracker.Activator
+Bundle-Activator: at.fhv.TimeTracker.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime, 
  org.eclipse.uml2.uml, 
@@ -19,5 +19,5 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: at.fhv.example.TimeTracker.main
+Export-Package: at.fhv.TimeTracker, at.fhv.TimeTracker.common
 
