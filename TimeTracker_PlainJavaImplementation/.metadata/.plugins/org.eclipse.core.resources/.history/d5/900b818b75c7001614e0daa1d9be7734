@@ -1,0 +1,9 @@
+
+public class Test {
+	public static void main(String[] args){
+		System.out.println("G3T FVCKD");
+		/*
+		 * Further info in Restful Web Services - first application (Tutorial)
+		 */
+	}
+}
