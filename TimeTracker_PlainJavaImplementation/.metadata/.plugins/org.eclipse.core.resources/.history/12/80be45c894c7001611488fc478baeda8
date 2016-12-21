@@ -15,12 +15,4 @@ public class UserService {
 		return ("registration failed");
 	}
 	
-	public void loginUser(){
-		//TODO Signature and body
-	}
-	
-	public void logoutUser(){
-		//TODO Signature and body
-	}
-	
 }
