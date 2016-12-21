@@ -1,0 +1,12 @@
+package at.fhv.timetracker.user;
+import javax.ws.rs.Path;
+
+
+@Path("/UserService")
+public class UserService {
+
+	public String registerUser(){
+		return new String("registration failed");
+	}
+	
+}
