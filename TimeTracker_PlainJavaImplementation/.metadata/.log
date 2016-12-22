@@ -654,3 +654,114 @@ org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(324) The type jav
 
 !ENTRY org.eclipse.jface.text 2 0 2016-12-21 16:35:06.669
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2016-12-22 11:41:41.373 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-22 11:45:06.598
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-22 11:45:06.612
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-22 11:45:45.135
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-22 11:45:45.148
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-12-22 12:00:24.521
+!MESSAGE Full project indexing required:
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-api-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-locator-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-utils-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.inject-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-client.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-common.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-container-servlet.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-guava-2.25.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-media-jaxb.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-server.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/persistence-api-1.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar
+  [+] /home/thomas/share/lib/annotations-api.jar
+  [+] /home/thomas/share/lib/catalina-ant.jar
+  [+] /home/thomas/share/lib/catalina-ha.jar
+  [+] /home/thomas/share/lib/catalina-tribes.jar
+  [+] /home/thomas/share/lib/catalina.jar
+  [+] /home/thomas/share/lib/ecj-4.2.2.jar
+  [+] /home/thomas/share/lib/el-api.jar
+  [+] /home/thomas/share/lib/jasper-el.jar
+  [+] /home/thomas/share/lib/jasper.jar
+  [+] /home/thomas/share/lib/jsp-api.jar
+  [+] /home/thomas/share/lib/servlet-api.jar
+  [+] /home/thomas/share/lib/tomcat-api.jar
+  [+] /home/thomas/share/lib/tomcat-coyote.jar
+  [+] /home/thomas/share/lib/tomcat-dbcp.jar
+  [+] /home/thomas/share/lib/tomcat-i18n-es.jar
+  [+] /home/thomas/share/lib/tomcat-i18n-fr.jar
+  [+] /home/thomas/share/lib/tomcat-i18n-ja.jar
+  [+] /home/thomas/share/lib/tomcat-jdbc.jar
+  [+] /home/thomas/share/lib/tomcat-util.jar
+  [+] /home/thomas/share/lib/tomcat7-websocket.jar
+  [+] /home/thomas/share/lib/websocket-api.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/jce.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/resources.jar
+  [+] /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-api-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-locator-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/hk2-utils-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.inject-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-client.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-common.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-container-servlet.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-guava-2.25.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-media-jaxb.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/jersey-server.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/persistence-api-1.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJB2/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)

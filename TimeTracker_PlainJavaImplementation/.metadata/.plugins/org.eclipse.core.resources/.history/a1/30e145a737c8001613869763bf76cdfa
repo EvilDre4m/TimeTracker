@@ -1,0 +1,31 @@
+package at.fhv.timetracker.user;
+
+public class User {
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password; //Yep, we're actually doing it. Just deal with it ;-)
+	
+	public User(String firstName, String lastName, String email, String password){
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.email = email;
+		this.password = password;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+}

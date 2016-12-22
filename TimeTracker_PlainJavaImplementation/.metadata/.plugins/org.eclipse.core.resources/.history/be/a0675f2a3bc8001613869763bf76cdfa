@@ -1,0 +1,10 @@
+package at.fhv.timetracker.task;
+
+public class Task {
+
+	/*
+	 * Timestamp string format; adhere to it or app won't work
+	 * YYYY-MM-DD--HH-MM
+	 */
+	
+}

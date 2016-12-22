@@ -2,4 +2,10 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="at.fhv.timetracker.Timetracker"/>
 <fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.task.Task"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.user.User"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.common.timeStamp"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.project.Project"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,19 @@
+package at.fhv.timetracker.task;
+
+import at.fhv.timetracker.common.timeStamp;
+
+public class Task {
+
+	private timeStamp startTime;
+	private 
+	
+	/*
+	 * Timestamp string format; adhere to it or app won't work
+	 * YYYY-MM-DD--HH-MM
+	 */
+	
+	public Task(){
+		
+	}
+	
+}

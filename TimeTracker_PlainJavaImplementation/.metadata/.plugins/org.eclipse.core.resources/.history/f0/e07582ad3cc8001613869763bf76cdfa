@@ -1,0 +1,31 @@
+package at.fhv.timetracker.task;
+
+import at.fhv.timetracker.common.timeStamp;
+import at.fhv.timetracker.project.Project;
+import at.fhv.timetracker.user.User;
+
+public class Task {
+
+	private timeStamp startTime;
+	private timeStamp endTime;
+	private String description;
+	private Project containingProject;
+	private User creator;
+	
+	public Task(timeStamp startTime, timeStamp endTime, String description, Project project, User creator){
+		this.updateStartTime(startTime);
+		this.endTime = endTime;
+		this.description = description;
+		this.containingProject = project;
+		this.creator = creator;
+	}
+
+	public timeStamp getStartTime() {
+		return startTime;
+	}
+
+	public void updateStartTime(timeStamp startTime) {
+		this.startTime = startTime;
+	}
+	
+}

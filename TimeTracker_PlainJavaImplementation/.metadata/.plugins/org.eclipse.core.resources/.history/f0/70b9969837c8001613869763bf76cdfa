@@ -1,0 +1,12 @@
+package at.fhv.timetracker.user;
+
+public class User {
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password; //Yep, we're actually doing it. Just deal with it ;-)
+	
+	public User(String name){
+		
+	}
+}
