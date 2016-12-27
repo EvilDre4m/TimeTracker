@@ -1,6 +1,0 @@
-package at.fhv.timetracker.user;
-
-@Path("/UserService"))
-public class UserService {
-
-}

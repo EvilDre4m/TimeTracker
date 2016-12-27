@@ -1,7 +1,0 @@
-package at.fhv.timetracker.user;
-import javax.ws.rs.Path;s
-
-@Path("/UserService")
-public class UserService {
-
-}
