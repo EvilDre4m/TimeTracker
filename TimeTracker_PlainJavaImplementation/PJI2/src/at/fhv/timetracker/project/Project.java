@@ -10,11 +10,13 @@ public class Project {
 	private User owningUser;
 	private ArrayList<Task> assignedTasks;
 	private String description;
+	private int id;
 	
-	public Project(User owningUser, String description){
+	public Project(User owningUser, String description, int id){
 		this.setOwningUser(owningUser);
 		this.assignedTasks = new ArrayList<>();
 		this.setDescription(description);
+		this.setId(id);
 	}
 
 	///////////////////////////////////////////////
@@ -57,5 +59,27 @@ public class Project {
 	public String getTotalProjectWorkTime(){
 		//TODO Body
 		return "None ;-)";
+	}
+	
+	public boolean equals(Project otherProject){
+		if(otherProject == null){
+			return false;
+		}
+		
+		if( this.assignedTasks.equals(otherProject.getAssignedTasks() ) && 
+				this.description.equals(otherProject.getDescription() ) &&
+				this.owningUser.equals(otherProject.getOwningUser() )){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }

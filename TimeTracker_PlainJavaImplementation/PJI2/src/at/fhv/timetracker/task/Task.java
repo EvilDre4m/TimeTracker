@@ -11,13 +11,15 @@ public class Task {
 	private String description;
 	private Project containingProject;
 	private User creator;
+	private int id;
 	
-	public Task(timeStamp startTime, timeStamp endTime, String description, Project project, User creator){
+	public Task(timeStamp startTime, timeStamp endTime, String description, Project project, User creator, int id){
 		this.updateStartTime(startTime);
 		this.updateEndTime(endTime);
 		this.setDescription(description);
 		this.updateContainingProject(project);
 		this.setCreator(creator);
+		this.setId(id);
 	}
 
 	public timeStamp getStartTime() {
@@ -58,6 +60,30 @@ public class Task {
 
 	public void setCreator(User creator) {
 		this.creator = creator;
+	}
+	
+	public boolean equals(Task otherTask){
+		if(otherTask == null){
+			return false;
+		}
+		
+		if(this.containingProject == otherTask.getContainingProject() &&
+				this.creator == otherTask.getCreator() &&
+				this.description == otherTask.getDescription() &&
+				this.endTime.equals(otherTask.getEndTime() ) &&
+				this.startTime.equals(otherTask.getStartTime() ) ){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

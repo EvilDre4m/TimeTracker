@@ -1,0 +1,39 @@
+package at.fhv.timetracker.user;
+import javax.websocket.server.PathParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.core.MediaType;
+
+import at.fhv.timetracker.user.User;
+
+
+@Path("/UserService")
+public class UserService {
+
+	@PUT
+	@Path("/users")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String registerUser(@FormParam("id") int id,
+			@FormParam("firstname") String firstname,
+			@FormParam("lastname") String lastname,
+			@FormParam("email") String email,
+			@FormParam("password") String password) 
+	{
+		User newUser = new User(firstname, lastname, email, password, id);
+		return ("registration failed");
+	}
+	
+	public void loginUser(){
+		//TODO Signature and body
+	}
+	
+	public void logoutUser(){
+		//TODO Signature and body
+	}
+	
+}

@@ -29,4 +29,12 @@ public class timeStamp {
 			throw new IllegalArgumentException("Invalid pattern of timestamp!");
 		}
 	}
+	
+	public boolean equals(timeStamp otherTimestamp){
+		if(this.storedTimestamp.equals(otherTimestamp.getTimestamp())){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

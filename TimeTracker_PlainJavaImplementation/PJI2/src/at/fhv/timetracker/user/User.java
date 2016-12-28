@@ -5,12 +5,14 @@ public class User {
 	private String lastName;
 	private String email;
 	private String password; //Yep, we're actually doing it. Just deal with it ;-)
+	private int id;
 	
-	public User(String firstName, String lastName, String email, String password){
+	public User(String firstName, String lastName, String email, String password, int id){
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setEmail(email);
 		this.setPassword(password);
+		this.setId(id);
 	}
 
 	public String getFirstName() {
@@ -43,5 +45,28 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public boolean equals(User otherUser){
+		if(otherUser == null){
+			return false;
+		}
+		
+		if (this.email == otherUser.getEmail() &&
+				this.firstName == otherUser.getFirstName() &&
+				this.lastName == otherUser.getLastName() &&
+				this.password == otherUser.getPassword() ){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
