@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
   <mtl:Module name="properties" nsURI="at::fhv::TimeTracker::java::common::properties" startHeaderPosition="30" endHeaderPosition="291">
-    <input>
-      <takesTypesFrom href="http://www.eclipse.org/ocl/1.1.0/UML#/"/>
-    </input>
+    <input/>
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
     </input>

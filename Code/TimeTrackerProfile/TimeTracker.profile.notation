@@ -35,7 +35,41 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BmtcKbe9EeaH071aJO2UFw"/>
     </children>
     <element xmi:type="uml:Stereotype" href="TimeTracker.profile.uml#_BmnVgLe9EeaH071aJO2UFw"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BmqY0be9EeaH071aJO2UFw" x="198" y="285" height="99"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BmqY0be9EeaH071aJO2UFw" x="193" y="268" height="99"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_YKBc0M0NEea6OvdEEE7kwg" type="Stereotype_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YKCq8M0NEea6OvdEEE7kwg" type="Stereotype_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YKCq8c0NEea6OvdEEE7kwg" type="Stereotype_AttributeCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_YKCq8s0NEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YKCq880NEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YKCq9M0NEea6OvdEEE7kwg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YKCq9c0NEea6OvdEEE7kwg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_YKCq9s0NEea6OvdEEE7kwg" type="Stereotype_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_YKCq980NEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YKCq-M0NEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YKCq-c0NEea6OvdEEE7kwg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YKCq-s0NEea6OvdEEE7kwg"/>
+    </children>
+    <element xmi:type="uml:Stereotype" href="TimeTracker.profile.uml#_YJ9LYM0NEea6OvdEEE7kwg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YKBc0c0NEea6OvdEEE7kwg" x="326" y="266"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BDT-8M0YEea6OvdEEE7kwg" type="Stereotype_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BDUmAM0YEea6OvdEEE7kwg" type="Stereotype_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BDUmAc0YEea6OvdEEE7kwg" type="Stereotype_AttributeCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_BDUmAs0YEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BDUmA80YEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BDUmBM0YEea6OvdEEE7kwg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BDUmBc0YEea6OvdEEE7kwg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BDUmBs0YEea6OvdEEE7kwg" type="Stereotype_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_BDUmB80YEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BDUmCM0YEea6OvdEEE7kwg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BDUmCc0YEea6OvdEEE7kwg"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BDUmCs0YEea6OvdEEE7kwg"/>
+    </children>
+    <element xmi:type="uml:Stereotype" href="TimeTracker.profile.uml#_BDSJwM0YEea6OvdEEE7kwg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BDT-8c0YEea6OvdEEE7kwg" x="74" y="269"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_Sw3F4be7EeaH071aJO2UFw" name="diagram_compatibility_version" stringValue="1.2.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Sw3F4re7EeaH071aJO2UFw"/>
@@ -59,5 +93,19 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HUQ00re9EeaH071aJO2UFw" points="[247, 285, -643984, -643984]$[247, 189, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HU7jMLe9EeaH071aJO2UFw" id="(0.49,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HU7jMbe9EeaH071aJO2UFw" id="(0.51,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_Z6Z1UM0NEea6OvdEEE7kwg" type="Extension_Edge" source="_YKBc0M0NEea6OvdEEE7kwg" target="_rBJkgLe8EeaH071aJO2UFw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_Z6Z1Uc0NEea6OvdEEE7kwg"/>
+    <element xmi:type="uml:Extension" href="TimeTracker.profile.uml#_Z6TusM0NEea6OvdEEE7kwg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z6Z1Us0NEea6OvdEEE7kwg" points="[375, 291, -643984, -643984]$[279, 189, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z6gjAM0NEea6OvdEEE7kwg" id="(0.29,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z6gjAc0NEea6OvdEEE7kwg" id="(0.83,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_CgVWkM0YEea6OvdEEE7kwg" type="Extension_Edge" source="_BDT-8M0YEea6OvdEEE7kwg" target="_rBJkgLe8EeaH071aJO2UFw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CgVWkc0YEea6OvdEEE7kwg"/>
+    <element xmi:type="uml:Extension" href="TimeTracker.profile.uml#_CgRsMM0YEea6OvdEEE7kwg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CgVWks0YEea6OvdEEE7kwg" points="[137, 277, -643984, -643984]$[198, 189, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CgbdMM0YEea6OvdEEE7kwg" id="(0.63,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CgbdMc0YEea6OvdEEE7kwg" id="(0.02,1.0)"/>
   </edges>
 </notation:Diagram>

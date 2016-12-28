@@ -1,30 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_djy5cLe6EeaH071aJO2UFw" name="RootElement">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_Yx0GQLe8EeaH071aJO2UFw">
-    <importedPackage xmi:type="uml:Profile" href="../TimeTrackerProfile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:StateMachine" xmi:id="_dr00ELe6EeaH071aJO2UFw" name="StateMachine1">
-    <region xmi:type="uml:Region" xmi:id="_duu-ILe6EeaH071aJO2UFw" name="Region1"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_dvDHMLe6EeaH071aJO2UFw" name="Interaction1"/>
-  <packagedElement xmi:type="uml:Package" xmi:id="_d0Vq4MICEeaJ48JiJ_kfAw" name="at.fhv.TimeTracker">
-    <packagedElement xmi:type="uml:Class" xmi:id="_hJC84MICEeaJ48JiJ_kfAw" name="Main">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_deqgYMIDEeaJ48JiJ_kfAw" name="test">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_DghoQM0YEea6OvdEEE7kwg/9" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_DghoQM0YEea6OvdEEE7kwg/9 ../TimeTrackerProfile/TimeTracker.profile.uml#_DghoQc0YEea6OvdEEE7kwg">
+  <uml:Model xmi:id="_djy5cLe6EeaH071aJO2UFw" name="RootElement">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Yx0GQLe8EeaH071aJO2UFw">
+      <importedPackage xmi:type="uml:Profile" href="../TimeTrackerProfile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_dr00ELe6EeaH071aJO2UFw" name="StateMachine1">
+      <region xmi:type="uml:Region" xmi:id="_duu-ILe6EeaH071aJO2UFw" name="Region1"/>
     </packagedElement>
-  </packagedElement>
-  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zEMN4Le8EeaH071aJO2UFw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zEPRMLe8EeaH071aJO2UFw" source="PapyrusVersion">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRMbe8EeaH071aJO2UFw" key="Version" value="0.0.1"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRMre8EeaH071aJO2UFw" key="Comment" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRM7e8EeaH071aJO2UFw" key="Copyright" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRNLe8EeaH071aJO2UFw" key="Date" value="2016-12-01"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zEPRNbe8EeaH071aJO2UFw" key="Author" value=""/>
-    </eAnnotations>
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zEOqILe8EeaH071aJO2UFw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <references xmi:type="ecore:EPackage" href="../TimeTrackerProfile/TimeTracker.profile.uml#_uYukULe8EeaH071aJO2UFw"/>
-    </eAnnotations>
-    <appliedProfile xmi:type="uml:Profile" href="../TimeTrackerProfile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
-  </profileApplication>
-</uml:Model>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_dvDHMLe6EeaH071aJO2UFw" name="Interaction1"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_d0Vq4MICEeaJ48JiJ_kfAw" name="at.fhv.TimeTracker">
+      <packagedElement xmi:type="uml:Class" xmi:id="_hJC84MICEeaJ48JiJ_kfAw" name="User">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_deqgYMIDEeaJ48JiJ_kfAw" name="id" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XvJYIMzgEeaQ8uJBixhvrg" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aiXtsMzgEeaQ8uJBixhvrg" name="profession" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_54g8QM0DEea7pOI1zkk-lg" client="_hJC84MICEeaJ48JiJ_kfAw" supplier="_x-gTEM0DEea7pOI1zkk-lg" contract="_x-gTEM0DEea7pOI1zkk-lg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_k2dpIMzfEeaQ8uJBixhvrg" name="UserService">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WYhB8M0YEea6OvdEEE7kwg" name="getUsers">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WYhB8c0YEea6OvdEEE7kwg" type="_hJC84MICEeaJ48JiJ_kfAw" isUnique="false" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oQGN4M0gEea6OvdEEE7kwg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oQIqIM0gEea6OvdEEE7kwg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_t15CQMzfEeaQ8uJBixhvrg" name="UserDao" visibility="public">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_-2ROsM0OEea6OvdEEE7kwg" name="getAllUsers" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-2ROsc0OEea6OvdEEE7kwg" type="_hJC84MICEeaJ48JiJ_kfAw" isUnique="false" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SfC9YM0VEea6OvdEEE7kwg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SfEykM0VEea6OvdEEE7kwg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_PUn3gM0PEea6OvdEEE7kwg" name="saveUserList" visibility="private">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_PUn3gc0PEea6OvdEEE7kwg" name="userList" type="_hJC84MICEeaJ48JiJ_kfAw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W2mzgM0VEea6OvdEEE7kwg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W2oosM0VEea6OvdEEE7kwg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_x-gTEM0DEea7pOI1zkk-lg" name="Serializable"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zEMN4Le8EeaH071aJO2UFw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ev3wQM0YEea6OvdEEE7kwg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ev3wQc0YEea6OvdEEE7kwg" key="Version" value="0.0.10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ev3wQs0YEea6OvdEEE7kwg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ev3wQ80YEea6OvdEEE7kwg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ev3wRM0YEea6OvdEEE7kwg" key="Date" value="2016-12-28"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ev3wRc0YEea6OvdEEE7kwg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zEOqILe8EeaH071aJO2UFw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../TimeTrackerProfile/TimeTracker.profile.uml#_DghoQc0YEea6OvdEEE7kwg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../TimeTrackerProfile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
+    </profileApplication>
+  </uml:Model>
+  <RootElement:User xmi:id="_KQtD8M0KEea6OvdEEE7kwg" base_Class="_hJC84MICEeaJ48JiJ_kfAw"/>
+  <RootElement:UserDao xmi:id="_JtXUEM0PEea6OvdEEE7kwg" base_Class="_t15CQMzfEeaQ8uJBixhvrg"/>
+  <RootElement:UserService xmi:id="_Fo5C8M0YEea6OvdEEE7kwg" base_Class="_k2dpIMzfEeaQ8uJBixhvrg"/>
+</xmi:XMI>

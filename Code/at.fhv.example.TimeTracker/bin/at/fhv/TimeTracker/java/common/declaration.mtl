@@ -12,7 +12,9 @@
 [template public genOperations(aClass : Class)]
 [for (anOperation : Operation | aClass.ownedOperation->union(aClass.allRealizedInterfaces().ownedOperation))]
 [anOperation.genMethodPrototype()/] {
-	[if (anOperation.genReturn() <> 'void')]return null;[/if]
+// [protected (anOperation.name)]
+
+// [/protected]
 }
 
 [/for]

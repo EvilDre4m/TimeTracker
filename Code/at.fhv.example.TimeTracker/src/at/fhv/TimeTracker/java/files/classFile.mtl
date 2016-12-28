@@ -81,6 +81,7 @@ public [if (aProperty.isStatic)]static [/if][aProperty.genType()/] get[aProperty
 }
 [if (not aProperty.isLeaf)]
 
+@XmlElement
 public [if (aProperty.isStatic)]static [/if]void set[aProperty.genName().toUpperFirst()/]([aProperty.genType()/] [aProperty.genName()/]){
    [if (not aProperty.isStatic)]this.[/if][aProperty.genName()/] = [aProperty.genName()/];
 }
