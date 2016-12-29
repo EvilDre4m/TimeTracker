@@ -1194,3 +1194,57 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 
 !ENTRY org.eclipse.jface.text 2 0 2016-12-28 12:23:16.133
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2016-12-29 10:27:04.456 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-29 10:45:57.730
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-29 10:45:57.742
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-29 10:48:54.669
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-12-29 10:48:54.676
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-12-29 10:49:23.968
+!MESSAGE Full project indexing required:
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-api-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-locator-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-utils-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.inject-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-client.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-common.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-container-servlet.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-guava-2.25.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-media-jaxb.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-server.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/persistence-api-1.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/src/at/fhv/timetracker/common/sqlite-jdbc-3.15.1.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)

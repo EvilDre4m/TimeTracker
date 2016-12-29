@@ -1,0 +1,12 @@
+package at.fhv.timetracker.user;
+
+import java.sql.*;
+
+public class UserDAO {
+	Class.forName("org.sqlite.JDBC");
+	Connection c = 
+	
+	public int addUser(User newUser){
+		return 0;
+	}
+}
