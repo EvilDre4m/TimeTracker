@@ -1,11 +1,11 @@
 package at.fhv.timetracker.user;
 
 public class User {
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password; //Yep, we're actually doing it. Just deal with it ;-)
-	private int id;
 	
 	public User(String firstName, String lastName, String email, String password, int id){
 		this.setFirstName(firstName);

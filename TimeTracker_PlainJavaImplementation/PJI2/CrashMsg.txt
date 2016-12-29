@@ -1,0 +1,95 @@
+Dez 29, 2016 1:16:40 PM org.apache.catalina.core.AprLifecycleListener init
+INFORMATION: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Dez 29, 2016 1:16:41 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNUNG: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:PJI2' did not find a matching property.
+Dez 29, 2016 1:16:42 PM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["http-bio-13080"]
+Dez 29, 2016 1:16:42 PM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["ajp-bio-13009"]
+Dez 29, 2016 1:16:42 PM org.apache.catalina.startup.Catalina load
+INFORMATION: Initialization processed in 2669 ms
+Dez 29, 2016 1:16:42 PM org.apache.catalina.core.StandardService startInternal
+INFORMATION: Starting service Catalina
+Dez 29, 2016 1:16:42 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMATION: Starting Servlet Engine: Apache Tomcat/7.0.47
+Dez 29, 2016 1:16:43 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMATION: validateJarFile(/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/PJI2/WEB-INF/lib/javax.servlet-api-3.0.1.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Dez 29, 2016 1:16:46 PM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["http-bio-13080"]
+Dez 29, 2016 1:16:46 PM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["ajp-bio-13009"]
+Dez 29, 2016 1:16:46 PM org.apache.catalina.startup.Catalina start
+INFORMATION: Server startup in 4374 ms
+Dez 29, 2016 1:17:49 PM org.glassfish.jersey.internal.Errors logErrors
+SCHWERWIEGEND: Following issues have been detected: 
+WARNING: A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public void at.fhv.timetracker.user.UserService.logoutUser(int) and public int at.fhv.timetracker.user.UserService.loginUser(int) at matching regular expression /users/([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.
+HINT: A HTTP GET method, public void at.fhv.timetracker.user.UserService.logoutUser(int), returns a void type. It can be intentional and perfectly fine, but it is a little uncommon that GET method returns always "204 No Content".
+
+Dez 29, 2016 1:17:49 PM org.apache.catalina.core.ApplicationContext log
+SCHWERWIEGEND: StandardWrapper.Throwable
+org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[HINT] A HTTP GET method, public void at.fhv.timetracker.user.UserService.logoutUser(int), returns a void type. It can be intentional and perfectly fine, but it is a little uncommon that GET method returns always "204 No Content".; source='ResourceMethod{httpMethod=GET, consumedTypes=[], producedTypes=[application/xml], suspended=false, suspendTimeout=0, suspendTimeoutUnit=MILLISECONDS, invocable=Invocable{handler=ClassBasedMethodHandler{handlerClass=class at.fhv.timetracker.user.UserService, handlerConstructors=[org.glassfish.jersey.server.model.HandlerConstructor@1b35d9a5]}, definitionMethod=public void at.fhv.timetracker.user.UserService.logoutUser(int), parameters=[Parameter [type=int, source=userid, defaultValue=null]], responseType=void}, nameBindings=[]}', [FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public void at.fhv.timetracker.user.UserService.logoutUser(int) and public int at.fhv.timetracker.user.UserService.loginUser(int) at matching regular expression /users/([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@1c4f6685']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:555)
+	at org.glassfish.jersey.server.ApplicationHandler.access$500(ApplicationHandler.java:184)
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350)
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Dez 29, 2016 1:17:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SCHWERWIEGEND: Allocate exception for servlet Jersey RESTful Application
+org.glassfish.jersey.server.model.ModelValidationException: Validation of the application resource model has failed during application initialization.
+[[HINT] A HTTP GET method, public void at.fhv.timetracker.user.UserService.logoutUser(int), returns a void type. It can be intentional and perfectly fine, but it is a little uncommon that GET method returns always "204 No Content".; source='ResourceMethod{httpMethod=GET, consumedTypes=[], producedTypes=[application/xml], suspended=false, suspendTimeout=0, suspendTimeoutUnit=MILLISECONDS, invocable=Invocable{handler=ClassBasedMethodHandler{handlerClass=class at.fhv.timetracker.user.UserService, handlerConstructors=[org.glassfish.jersey.server.model.HandlerConstructor@1b35d9a5]}, definitionMethod=public void at.fhv.timetracker.user.UserService.logoutUser(int), parameters=[Parameter [type=int, source=userid, defaultValue=null]], responseType=void}, nameBindings=[]}', [FATAL] A resource model has ambiguous (sub-)resource method for HTTP method GET and input mime-types as defined by"@Consumes" and "@Produces" annotations at Java methods public void at.fhv.timetracker.user.UserService.logoutUser(int) and public int at.fhv.timetracker.user.UserService.loginUser(int) at matching regular expression /users/([^/]+). These two methods produces and consumes exactly the same mime-types and therefore their invocation as a resource methods will always fail.; source='org.glassfish.jersey.server.model.RuntimeResource@1c4f6685']
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:555)
+	at org.glassfish.jersey.server.ApplicationHandler.access$500(ApplicationHandler.java:184)
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350)
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+

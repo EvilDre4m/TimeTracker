@@ -39,20 +39,20 @@ public class UserService {
 		return FAIL;
 	}
 	
-	@GET
-	@Path("/users/{userid}")
-	@Produces(MediaType.APPLICATION_XML)
-	public int loginUser(@PathParam("id") int id){
-		//TODO body
-		return 0;
-	}
-	
-	@GET
-	@Path("/users/{userid}")
-	@Produces(MediaType.APPLICATION_XML)
-	public void logoutUser(@PathParam("userid") int id){
-		//TODO body
-		return;
-	}
+//	@GET
+//	@Path("/users/{userid}")
+//	@Produces(MediaType.APPLICATION_XML)
+//	public int loginUser(@PathParam("id") int id){
+//		//TODO body
+//		return 0;
+//	}
+//	
+//	@GET
+//	@Path("/users/{userid}")
+//	@Produces(MediaType.APPLICATION_XML)
+//	public void logoutUser(@PathParam("userid") int id){
+//		//TODO body
+//		return;
+//	}
 	
 }

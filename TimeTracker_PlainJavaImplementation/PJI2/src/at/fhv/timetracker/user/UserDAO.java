@@ -57,6 +57,41 @@ public class UserDAO {
 	}
 	
 	public ArrayList<User> getAllUsers(){
+		if(c == null){
+			init();
+		}
 		
+		ArrayList<User> users = new ArrayList<>();
+		
+		try {
+			stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Users");
+			
+			int id;
+			String firstName;
+			String lastName;
+			String email;
+			String password;
+			
+			while(rs.next()){
+				id = rs.getInt("ID");
+				firstName = rs.getString("FIRSTNAME");
+				lastName = rs.getString("LASTNAME");
+				email = rs.getString("EMAIL");
+				password = rs.getString("PASSWORD");
+				users.add( new User(firstName, lastName, email, password, id) );
+			}
+			
+			rs.close();
+			stmt.close();
+			stmt = null;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return users;
+			
 	}
+	
 }

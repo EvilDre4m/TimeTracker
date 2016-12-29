@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/PJI" path="/PJI" reloadable="true" source="org.eclipse.jst.jee.server:PJI"/><Context docBase="/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/PJB2" path="/PJB2" reloadable="true" source="org.eclipse.jst.jee.server:PJB2"/></Host>
+      <Context docBase="/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/PJI2" path="/PJI2" reloadable="true" source="org.eclipse.jst.jee.server:PJI2"/></Host>
     </Engine>
   </Service>
 </Server>
