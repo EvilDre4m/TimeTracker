@@ -1,0 +1,22 @@
+import java.util.List;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.Form;
+import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.MediaType;
+
+
+
+public class Main {
+
+	public static void test_registerUser(){
+		Form form = new Form(); 
+	}
+	
+	public static void main(String[] args){
+		test_registerUser();
+	}
+	
+}

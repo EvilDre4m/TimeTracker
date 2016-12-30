@@ -25,8 +25,8 @@ public class UserService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public String registerUser(@FormParam("id") int id,
-			@FormParam("firstname") String firstname,
-			@FormParam("lastname") String lastname,
+			@FormParam("firstName") String firstname,
+			@FormParam("lastName") String lastname,
 			@FormParam("email") String email,
 			@FormParam("password") String password) 
 	{

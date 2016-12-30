@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public void test_registerUser(){
+		
+	}
+	
+	public static void main(String[] args){
+		
+	}
+	
+}
