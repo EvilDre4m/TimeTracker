@@ -1,0 +1,11 @@
+package at.fhv.timetracker.user;
+
+import java.sql.*;
+
+public class UserDAO {
+	
+	
+	public int addUser(User newUser){
+		return 0;
+	}
+}

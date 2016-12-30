@@ -1,0 +1,42 @@
+package at.fhv.timetracker.user;
+
+import java.sql.*;
+
+public class UserDAO {
+	Connection c = null;
+	Statement stmt = null;
+	
+	private void init(){
+		try {
+			Class.forName("org.sqlite.JDBC");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
+			stmt = c.createStatement();
+			String sqlCreateTable = "CREATE TABLE Users IF NOT EXTSTS" +
+									"(ID INT PRIMARY KEY	NOT NULL" +
+									"FIRSTNAME		TEXT	NOT NULL" +
+									"LASTNAME		TEXT	NOT NULL" +
+									"EMAIL			TEXT	NOT NULL" +
+									"PASSWORD		TEXT	NOT NULL)";
+			stmt.executeUpdate(sqlCreateTable);
+			stmt.close();
+			stmt = null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public int addUser(User newUser){
+		if(c == null){
+			init();
+		}
+		
+		return 0;
+	}
+}

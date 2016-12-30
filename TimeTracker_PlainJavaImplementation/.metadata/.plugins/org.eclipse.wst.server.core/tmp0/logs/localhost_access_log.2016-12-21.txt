@@ -1,0 +1,10 @@
+127.0.0.1 - - [21/Dec/2016:16:25:45 +0100] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/Dec/2016:16:27:42 +0100] "GET /UserService/rest/registerUser HTTP/1.1" 404 1009
+127.0.0.1 - - [21/Dec/2016:16:27:50 +0100] "GET /UserService/registerUser HTTP/1.1" 404 999
+127.0.0.1 - - [21/Dec/2016:16:28:21 +0100] "GET /PJI/rest/UserService/registerUser HTTP/1.1" 500 9155
+127.0.0.1 - - [21/Dec/2016:16:30:41 +0100] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/Dec/2016:16:31:30 +0100] "GET /PJI/rest/UserService/registerUser HTTP/1.1" 500 9155
+127.0.0.1 - - [21/Dec/2016:16:40:07 +0100] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/Dec/2016:16:40:08 +0100] "GET /PJB2/ HTTP/1.1" 404 961
+127.0.0.1 - - [21/Dec/2016:16:41:17 +0100] "GET /PJI/rest/UserService/registerUser HTTP/1.1" 500 9044
+127.0.0.1 - - [21/Dec/2016:16:41:43 +0100] "GET /PJB2/rest/UserService/registerUser HTTP/1.1" 200 19
