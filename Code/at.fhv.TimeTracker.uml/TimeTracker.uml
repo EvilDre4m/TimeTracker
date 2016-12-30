@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_ITCLUM6UEea-xsdGgVp_8A/11" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_ITCLUM6UEea-xsdGgVp_8A/11 ../at.fhv.TimeTracker.profile/TimeTracker.profile.uml#_ITKuMM6UEea-xsdGgVp_8A">
+  <uml:Model xmi:id="_djy5cLe6EeaH071aJO2UFw" name="RootElement">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Yx0GQLe8EeaH071aJO2UFw">
+      <importedPackage xmi:type="uml:Profile" href="../TimeTrackerProfile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_dr00ELe6EeaH071aJO2UFw" name="StateMachine1">
+      <region xmi:type="uml:Region" xmi:id="_duu-ILe6EeaH071aJO2UFw" name="Region1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_dvDHMLe6EeaH071aJO2UFw" name="Interaction1"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_d0Vq4MICEeaJ48JiJ_kfAw" name="at.fhv.TimeTracker.common">
+      <packagedElement xmi:type="uml:Class" xmi:id="_v-4NQM56Eea-xsdGgVp_8A" name="timeStamp" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yDp_EM6TEea-xsdGgVp_8A" name="timestamp" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GaglcM5-Eea-xsdGgVp_8A" name="equals">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ilKn4M5_Eea-xsdGgVp_8A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_olyGgM5_Eea-xsdGgVp_8A" name="otherTimestamp" type="_v-4NQM56Eea-xsdGgVp_8A"/>
+        </ownedOperation>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_e2WAMM6UEea-xsdGgVp_8A">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e2WnQc6UEea-xsdGgVp_8A" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2WnQs6UEea-xsdGgVp_8A" key="Version" value="0.0.12"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2WnQ86UEea-xsdGgVp_8A" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2WnRM6UEea-xsdGgVp_8A" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2WnRc6UEea-xsdGgVp_8A" key="Date" value="2016-12-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e2WnRs6UEea-xsdGgVp_8A" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e2WnQM6UEea-xsdGgVp_8A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../at.fhv.TimeTracker.profile/TimeTracker.profile.uml#_ITKuMM6UEea-xsdGgVp_8A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../at.fhv.TimeTracker.profile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_l59LsM56Eea-xsdGgVp_8A" name="at.fhv.TimeTracker.user">
+      <packagedElement xmi:type="uml:Class" xmi:id="_dC7lAM6YEea-xsdGgVp_8A" name="User">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fmAlwM6YEea-xsdGgVp_8A" name="id" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_miJ4gM6YEea-xsdGgVp_8A" name="firstName" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oy4lAM6YEea-xsdGgVp_8A" name="lastName" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qsz7EM6YEea-xsdGgVp_8A" name="email" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_te8EcM6YEea-xsdGgVp_8A" name="password" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_4MfzUM6YEea-xsdGgVp_8A" name="equals">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7_HwYM6YEea-xsdGgVp_8A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__JjsEM6YEea-xsdGgVp_8A" name="otherUser" type="_dC7lAM6YEea-xsdGgVp_8A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cxoc0M6cEea-xsdGgVp_8A" name="UserDAO">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_8H1qsM6cEea-xsdGgVp_8A" name="init" visibility="private">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_BojhQM6dEea-xsdGgVp_8A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_GN2RYM6dEea-xsdGgVp_8A" name="addUser">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_K4Z8AM6dEea-xsdGgVp_8A" name="newUser" type="_dC7lAM6YEea-xsdGgVp_8A"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Mdx-YM6dEea-xsdGgVp_8A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XMSIcM6dEea-xsdGgVp_8A" name="getAllUsers">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_epgvAM6dEea-xsdGgVp_8A" type="_dC7lAM6YEea-xsdGgVp_8A" isUnique="false" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5Vi3UM6eEea-xsdGgVp_8A"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5VlTkM6eEea-xsdGgVp_8A" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_X212cM6fEea-xsdGgVp_8A" name="UserService"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GoxPoM6ZEea-xsdGgVp_8A">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GoxPos6ZEea-xsdGgVp_8A" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GoxPo86ZEea-xsdGgVp_8A" key="Version" value="0.0.12"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GoxPpM6ZEea-xsdGgVp_8A" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GoxPpc6ZEea-xsdGgVp_8A" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GoxPps6ZEea-xsdGgVp_8A" key="Date" value="2016-12-30"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GoxPp86ZEea-xsdGgVp_8A" key="Author" value=""/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GoxPoc6ZEea-xsdGgVp_8A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../at.fhv.TimeTracker.profile/TimeTracker.profile.uml#_ITKuMM6UEea-xsdGgVp_8A"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="../at.fhv.TimeTracker.profile/TimeTracker.profile.uml#_SwmnMLe7EeaH071aJO2UFw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pW4lkM56Eea-xsdGgVp_8A" name="at.fhv.TimeTracker.project"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_rGtkcM56Eea-xsdGgVp_8A" name="at.fhv.TimeTracker.task"/>
+  </uml:Model>
+  <RootElement:User xmi:id="_HackMM6ZEea-xsdGgVp_8A" base_Class="_dC7lAM6YEea-xsdGgVp_8A"/>
+  <RootElement:UserDao xmi:id="_jOJ0UM6cEea-xsdGgVp_8A" base_Class="_cxoc0M6cEea-xsdGgVp_8A"/>
+  <RootElement:UserService xmi:id="_bPqMYM6fEea-xsdGgVp_8A" base_Class="_X212cM6fEea-xsdGgVp_8A"/>
+  <RootElement:Timestamp xmi:id="_fOHmAM6fEea-xsdGgVp_8A" base_Class="_v-4NQM56Eea-xsdGgVp_8A"/>
+</xmi:XMI>

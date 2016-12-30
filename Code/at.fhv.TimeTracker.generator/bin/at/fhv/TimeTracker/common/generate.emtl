@@ -5,8 +5,9 @@
       <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
     </input>
     <imports href="../generate/user.emtl#/0"/>
-    <imports href="../generate/user_dao.emtl#/0"/>
-    <imports href="../generate/user_service.emtl#/0"/>
+    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_dao.emtl#/0"/>
+    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_service.emtl#/0"/>
+    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/timeStamp.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="main" visibility="Public" main="true">
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:ForBlock">
@@ -21,7 +22,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../generate/user_dao.emtl#/0/generateUserDao"/>
+            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_dao.emtl#/0/generateUserDao"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/main/%/%/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -29,7 +30,15 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="../generate/user_service.emtl#/0/generateUserService"/>
+            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_service.emtl#/0/generateUserService"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/main/%/%/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/timeStamp.emtl#/0/generateTimestamp"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/main/%/%/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -122,7 +131,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../generate/user_dao.emtl#/0/generateUserDao"/>
+          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_dao.emtl#/0/generateUserDao"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -134,7 +143,19 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../generate/user_service.emtl#/0/generateUserService"/>
+          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/user_service.emtl#/0/generateUserService"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateTimestamp">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/generate/timeStamp.emtl#/0/generateTimestamp"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -236,6 +257,9 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
@@ -252,124 +276,139 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/main">
-      <details key="start" value="255"/>
-      <details key="end" value="564"/>
-      <details key="line" value="9"/>
+      <details key="start" value="309"/>
+      <details key="end" value="651"/>
+      <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/main/%">
-      <details key="start" value="314"/>
-      <details key="end" value="549"/>
-      <details key="line" value="11"/>
-    </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/main/%/%">
-      <details key="start" value="374"/>
-      <details key="end" value="541"/>
+      <details key="start" value="368"/>
+      <details key="end" value="636"/>
       <details key="line" value="12"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/main/%/%/%">
-      <details key="start" value="440"/>
-      <details key="end" value="442"/>
+    <eAnnotations source="positions.2" references="/0/main/%/%">
+      <details key="start" value="428"/>
+      <details key="end" value="628"/>
       <details key="line" value="13"/>
     </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/main/%/%/%">
+      <details key="start" value="494"/>
+      <details key="end" value="496"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
     <eAnnotations source="positions.4" references="/0/main/%/%/%.1">
-      <details key="start" value="443"/>
-      <details key="end" value="464"/>
+      <details key="start" value="497"/>
+      <details key="end" value="518"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/main/%/%/%.1/aClass">
-      <details key="start" value="443"/>
-      <details key="end" value="449"/>
+      <details key="start" value="497"/>
+      <details key="end" value="503"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/main/%/%/%.2">
-      <details key="start" value="466"/>
-      <details key="end" value="470"/>
-      <details key="line" value="14"/>
+      <details key="start" value="520"/>
+      <details key="end" value="524"/>
+      <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/main/%/%/%.3">
-      <details key="start" value="471"/>
-      <details key="end" value="495"/>
+      <details key="start" value="525"/>
+      <details key="end" value="549"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/main/%/%/%.3/aClass">
-      <details key="start" value="471"/>
-      <details key="end" value="477"/>
+      <details key="start" value="525"/>
+      <details key="end" value="531"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/main/%/%/%.4">
-      <details key="start" value="497"/>
-      <details key="end" value="501"/>
-      <details key="line" value="15"/>
+      <details key="start" value="551"/>
+      <details key="end" value="555"/>
+      <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/main/%/%/%.5">
-      <details key="start" value="502"/>
-      <details key="end" value="530"/>
+      <details key="start" value="556"/>
+      <details key="end" value="584"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/main/%/%/%.5/aClass">
-      <details key="start" value="502"/>
-      <details key="end" value="508"/>
+      <details key="start" value="556"/>
+      <details key="end" value="562"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/main/%/%/%.6">
-      <details key="start" value="532"/>
-      <details key="end" value="534"/>
-      <details key="line" value="16"/>
+      <details key="start" value="586"/>
+      <details key="end" value="590"/>
+      <details key="line" value="17"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/main/%/%/aClass">
-      <details key="start" value="380"/>
-      <details key="end" value="394"/>
-      <details key="line" value="12"/>
-    </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/main/%/%/%.7">
-      <details key="start" value="397"/>
-      <details key="end" value="436"/>
+    <eAnnotations source="positions.13" references="/0/main/%/%/%.7">
+      <details key="start" value="591"/>
+      <details key="end" value="617"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/main/%/%/%.7/%">
-      <details key="start" value="397"/>
-      <details key="end" value="421"/>
+    <eAnnotations source="positions.14" references="/0/main/%/%/%.7/aClass">
+      <details key="start" value="591"/>
+      <details key="end" value="597"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/main/%/%/%.7/%/aPackage">
-      <details key="start" value="397"/>
-      <details key="end" value="405"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/main/%/%/%.7/%.1">
-      <details key="start" value="430"/>
-      <details key="end" value="435"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/main/%/aPackage">
-      <details key="start" value="320"/>
-      <details key="end" value="338"/>
-      <details key="line" value="11"/>
-    </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/main/%/%.1">
-      <details key="start" value="341"/>
-      <details key="end" value="369"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/main/%/%.1/aModel">
-      <details key="start" value="341"/>
-      <details key="end" value="347"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/main/%/%.1/%">
-      <details key="start" value="361"/>
-      <details key="end" value="368"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/main/%.1">
-      <details key="start" value="551"/>
-      <details key="end" value="553"/>
+    <eAnnotations source="positions.15" references="/0/main/%/%/%.8">
+      <details key="start" value="619"/>
+      <details key="end" value="621"/>
       <details key="line" value="18"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/main/aModel">
-      <details key="start" value="277"/>
-      <details key="end" value="291"/>
-      <details key="line" value="9"/>
+    <eAnnotations source="positions.16" references="/0/main/%/%/aClass">
+      <details key="start" value="434"/>
+      <details key="end" value="448"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/main/%/%/%.9">
+      <details key="start" value="451"/>
+      <details key="end" value="490"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/main/%/%/%.9/%">
+      <details key="start" value="451"/>
+      <details key="end" value="475"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/main/%/%/%.9/%/aPackage">
+      <details key="start" value="451"/>
+      <details key="end" value="459"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/main/%/%/%.9/%.1">
+      <details key="start" value="484"/>
+      <details key="end" value="489"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/main/%/aPackage">
+      <details key="start" value="374"/>
+      <details key="end" value="392"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/main/%/%.1">
+      <details key="start" value="395"/>
+      <details key="end" value="423"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/main/%/%.1/aModel">
+      <details key="start" value="395"/>
+      <details key="end" value="401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/main/%/%.1/%">
+      <details key="start" value="415"/>
+      <details key="end" value="422"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/main/%.1">
+      <details key="start" value="638"/>
+      <details key="end" value="640"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/main/aModel">
+      <details key="start" value="331"/>
+      <details key="end" value="345"/>
+      <details key="line" value="10"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>
