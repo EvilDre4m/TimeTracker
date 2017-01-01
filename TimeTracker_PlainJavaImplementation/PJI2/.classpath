@@ -34,6 +34,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/persistence-api-1.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="src/at/fhv/timetracker/common/sqlite-jdbc-3.15.1.jar"/>
+	<classpathentry kind="lib" path="sqlite-jdbc-3.15.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
