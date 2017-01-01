@@ -18,11 +18,11 @@ public class UserDAO {
 			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
 			c.setAutoCommit(true);
 			stmt = c.createStatement();
-			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Users" +
-									"(ID INT PRIMARY KEY	NOT NULL, " +
-									"FIRSTNAME		TEXT	NOT NULL, " +
-									"LASTNAME		TEXT	NOT NULL, " +
-									"EMAIL			TEXT	NOT NULL, " +
+			String sqlCreateTable = "CREATE TABLE IF NOT EXTSTS Users" +
+									"(ID INT PRIMARY KEY	NOT NULL" +
+									"FIRSTNAME		TEXT	NOT NULL" +
+									"LASTNAME		TEXT	NOT NULL" +
+									"EMAIL			TEXT	NOT NULL" +
 									"PASSWORD		TEXT	NOT NULL)";
 			stmt.executeUpdate(sqlCreateTable);
 			stmt.close();

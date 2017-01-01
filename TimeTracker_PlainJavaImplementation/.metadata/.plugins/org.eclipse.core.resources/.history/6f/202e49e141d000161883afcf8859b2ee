@@ -19,10 +19,10 @@ public class UserDAO {
 			c.setAutoCommit(true);
 			stmt = c.createStatement();
 			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Users" +
-									"(ID INT PRIMARY KEY	NOT NULL, " +
-									"FIRSTNAME		TEXT	NOT NULL, " +
-									"LASTNAME		TEXT	NOT NULL, " +
-									"EMAIL			TEXT	NOT NULL, " +
+									"(ID INT PRIMARY KEY	NOT NULL" +
+									"FIRSTNAME		TEXT	NOT NULL" +
+									"LASTNAME		TEXT	NOT NULL" +
+									"EMAIL			TEXT	NOT NULL" +
 									"PASSWORD		TEXT	NOT NULL)";
 			stmt.executeUpdate(sqlCreateTable);
 			stmt.close();
