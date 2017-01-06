@@ -1,0 +1,10 @@
+package at.fhv.timetracker.project; 
+
+public class ProjectDAO {
+	
+	public int addProject(Project newProject){
+		//TODO Body
+		return 0;
+	}
+
+}

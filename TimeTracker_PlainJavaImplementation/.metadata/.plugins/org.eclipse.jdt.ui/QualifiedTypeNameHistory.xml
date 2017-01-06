@@ -3,15 +3,22 @@
 <fullyQualifiedTypeName name="at.fhv.timetracker.Timetracker"/>
 <fullyQualifiedTypeName name="at.fhv.timetracker.task.Task"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.project.Project"/>
 <fullyQualifiedTypeName name="at.fhv.timetracker.common.timeStamp"/>
-<fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.user.UserDAO"/>
 <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.user.User"/>
 <fullyQualifiedTypeName name="javax.ws.rs.client.Client"/>
 <fullyQualifiedTypeName name="javax.ws.rs.client.ClientBuilder"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.user.UserService"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.user.User"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.user.UserDAO"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.project.ProjectDAO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.project.Project"/>
+<fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

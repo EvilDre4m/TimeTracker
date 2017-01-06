@@ -1,0 +1,20 @@
+package at.fhv.timetracker.project; 
+
+import java.sql.*;
+import java.util.ArrayList;
+
+public class ProjectDAO {
+	
+	Connection c = null;
+	Statement stmt = null;
+	
+	private void init(){
+		
+	}
+	
+	public int addProject(Project newProject){
+		//TODO Body
+		return 0;
+	}
+
+}

@@ -1,8 +1,8 @@
-fr1: user login
+fr1: user login --> DONE
  - scenario: wrong login
  - scenario: successfull login
 
-fr2: user registration
+fr2: user registration --> DONE
  - successfull registration
  - email missing
  - first name missing
@@ -49,5 +49,5 @@ fr10: time entries -> edit existing time entry
  - edit an existing time entry with missing end time
  - edit an existing time entry with missing description
 
-fr11: user logout
+fr11: user logout --> DONE
  - successful logout

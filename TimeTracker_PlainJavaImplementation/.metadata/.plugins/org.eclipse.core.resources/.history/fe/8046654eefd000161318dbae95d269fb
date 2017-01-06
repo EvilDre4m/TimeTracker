@@ -1,0 +1,26 @@
+package at.fhv.timetracker.project;
+
+import javax.ws.rs.PUT;
+
+@Path("/ProjectService")
+public class ProjectService {
+
+	@PUT
+	@Path("/projects")
+	public void addProject(){
+		//TODO Signature and body
+	}
+	
+	public void searchProject(){
+		//TODO Signature and body
+	}
+	
+	public void editProject(){
+		//TODO Signature and body
+	}
+	
+	public void deleteProject(){
+		//TODO Signature and body
+	}
+	
+}

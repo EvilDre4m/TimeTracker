@@ -1,0 +1,80 @@
+package at.fhv.timetracker.project;
+
+import java.util.ArrayList;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import at.fhv.timetracker.user.User;
+import at.fhv.timetracker.user.UserDAO;
+
+@Path("/ProjectService")
+public class ProjectService {
+
+	private UserDAO userDao = new UserDAO();
+	private ProjectDAO projectDao = new ProjectDAO();
+	private static final String SUCCESS = "<result>success</result>";
+	private static final String FAIL = "<result>failure</result>";
+	
+	@PUT
+	@Path("/projects")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String addProject(@FormParam("id") int id,
+			@FormParam("owningUserId") int ouId,
+			@FormParam("description") String description){
+		
+		User owningUser = null;
+		ArrayList<User> allUsers = userDao.getAllUsers();
+		for(User user : allUsers){
+			if(user.getId() == ouId){
+				owningUser = new User(user);
+				break;
+			}
+		}
+		
+		if(owningUser == null){
+			return FAIL;
+		}
+		
+		Project newProject = new Project(owningUser, description, id);
+		int rc = projectDao.addProject(newProject);
+		if(rc == 0){
+			return SUCCESS;
+		} else {
+			return FAIL;
+		}
+		
+	}
+	
+	@GET
+	@Path("/projects")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public Project searchProject(@FormParam("desc") String searchDescr){
+		//searchDescr = Description to search for
+		
+		if(searchDescr.equals("")){
+			return null;
+		}
+		
+		ArrayList<Project> allProjects = projectDao.getAllProjects();
+		
+		
+		return null;
+	}
+	
+	public void editProject(){
+		//TODO Signature and body
+	}
+	
+	public void deleteProject(){
+		//TODO Signature and body
+	}
+	
+}

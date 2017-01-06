@@ -51,6 +51,7 @@ public class UserDAO {
 			stmt = null;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return -1;
 		}
 		
 		return 0;
@@ -93,5 +94,14 @@ public class UserDAO {
 		return users;
 			
 	}
-	
+
+	public User getUserByID(int id){
+		ArrayList<User> allUsers = getAllUsers();
+		for(User entry : allUsers){
+			if(entry.getId() == id){
+				return entry;
+			}
+		}
+		return null;
+	}
 }
