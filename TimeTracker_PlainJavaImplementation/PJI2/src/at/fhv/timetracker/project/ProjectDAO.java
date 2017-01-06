@@ -122,5 +122,15 @@ public class ProjectDAO {
 		
 		return projects;
 	}
+	
+	public Project getProjectByID(int id){
+		ArrayList<Project> allProjects = getAllProjects();
+		for(Project entry : allProjects){
+			if(entry.getId() == id){
+				return entry;
+			}
+		}
+		return null;
+	}
 
 }

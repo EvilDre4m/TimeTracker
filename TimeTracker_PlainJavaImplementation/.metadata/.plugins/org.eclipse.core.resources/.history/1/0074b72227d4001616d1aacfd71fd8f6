@@ -1,0 +1,19 @@
+package at.fhv.timetracker.task;
+
+public class TaskDAO {
+
+	public int addTask(Task newTask){
+		//TODO: Body
+		return -1;
+	}
+	
+	public String getStringFormmByID(int id){
+		//TODO: Body
+		return "";
+	}
+	
+	public Task getTaskByID(int id){
+		return -1;
+	}
+	
+}

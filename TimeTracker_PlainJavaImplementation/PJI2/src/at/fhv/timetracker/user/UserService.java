@@ -1,5 +1,6 @@
 package at.fhv.timetracker.user;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.DELETE;
@@ -97,6 +98,11 @@ public class UserService {
 		
 		UserService.loggedOn = false;
 		return SUCCESS;
+	}
+	
+	public List<User> getAllUsers(){
+		//TODO: Signature
+		return userDAO.getAllUsers();
 	}
 	
 }

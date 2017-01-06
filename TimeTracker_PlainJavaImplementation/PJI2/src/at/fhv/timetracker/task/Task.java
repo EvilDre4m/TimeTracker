@@ -5,13 +5,13 @@ import at.fhv.timetracker.project.Project;
 import at.fhv.timetracker.user.User;
 
 public class Task {
-
+	
+	private int id;
 	private timeStamp startTime;
 	private timeStamp endTime;
 	private String description;
 	private Project containingProject;
 	private User creator;
-	private int id;
 	
 	public Task(timeStamp startTime, timeStamp endTime, String description, Project project, User creator, int id){
 		this.updateStartTime(startTime);

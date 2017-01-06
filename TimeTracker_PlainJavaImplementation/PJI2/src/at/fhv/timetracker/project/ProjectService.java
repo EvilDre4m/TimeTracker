@@ -1,6 +1,7 @@
 package at.fhv.timetracker.project;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -101,6 +102,12 @@ public class ProjectService {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public void deleteProject(@FormParam("id") Integer id){
 		projectDao.deleteProject(id);
+	}
+	
+	
+	public List<Project> getAllProjects(){
+		//TODO: Signature
+		return projectDao.getAllProjects();
 	}
 	
 }

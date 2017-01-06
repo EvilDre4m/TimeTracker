@@ -1,0 +1,63 @@
+package at.fhv.timetracker.task;
+
+import javax.websocket.server.PathParam;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/TaskService")
+public class TaskService {
+	
+	private static final String SUCCESS = "<result>success</result>";
+	private static final String FAIL = "<result>failure</result>";
+	
+	@PUT
+	@Path("/tasks")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String createTask(@FormParam("id") int id,
+			@FormParam("startTime") String startTime,
+			@FormParam("endTime") String endTime,
+			@FormParam("description") String description,
+			@FormParam("containingProjID") int contProjID,
+			@FormParam("creatingUserID") int creatUserID){
+		//TODO Signature and body
+		return FAIL;
+	}
+	
+	@PUT
+	@Path("/tasks/{taskid}")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String editTask(@PathParam("taskid") int taskId){
+		//TODO Body
+		//Note: Basically does an overwrite of an existing task
+		
+		return FAIL;
+	}
+	
+	@GET
+	@Path("/tasks")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String searchTask(){
+		//TODO Signature and body
+		
+		return FAIL;
+	}
+	
+	@DELETE
+	@Path("/tasks}")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String deleteTask(){
+		//TODO Signature and body
+		
+		return FAIL;
+	}
+}
