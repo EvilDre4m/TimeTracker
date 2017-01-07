@@ -1,2 +1,3 @@
 1483349984162	Encapsulate field 'loggedOn'
 1483369376291	Encapsulate field 'name'
+1483789213968	Rename local variable 'minutes'

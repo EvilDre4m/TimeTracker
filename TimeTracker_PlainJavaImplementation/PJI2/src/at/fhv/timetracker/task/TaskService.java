@@ -96,14 +96,9 @@ public class TaskService {
 	@Path("/tasks")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public String searchTask(@FormParam("id") int id){
-		//TODO Signature and body
-		String retString = taskDao.getStringFormByID(id);
-		if(retString.equals("")){
-			return FAIL;
-		}
-		
-		return retString;
+	public Task searchTask(@FormParam("id") int id){
+		Task retTask = taskDao.getTaskByID(id);
+		return retTask;
 	}
 	
 	@DELETE

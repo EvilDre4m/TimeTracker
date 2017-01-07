@@ -4,15 +4,17 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import at.fhv.timetracker.task.Task;
+import at.fhv.timetracker.task.TaskDAO;
 import at.fhv.timetracker.user.User;
 import at.fhv.timetracker.user.UserDAO;
 
 //FIXME: Test all this crap
 public class ProjectDAO {
 	
-	Connection c = null;
-	Statement stmt = null;
-	UserDAO userDao = new UserDAO();
+	private Connection c = null;
+	private Statement stmt = null;
+	private UserDAO userDao = new UserDAO();
+	private TaskDAO taskDao = new TaskDAO();
 	
 	private void init(){
 		try {
@@ -65,6 +67,11 @@ public class ProjectDAO {
 			init();
 		}
 		
+		ArrayList<Task> affectedTasks = getProjectByID(id).getAssignedTasks();
+		for(Task entry : affectedTasks){
+			taskDao.deleteTask(entry);
+		}
+		
 		try {
 			stmt = c.createStatement();
 			String sqlDeleteProject = "DELETE FROM Projects \n" +
@@ -78,7 +85,6 @@ public class ProjectDAO {
 		};
 		
 		
-		//FIXME: cascade to tasks 
 		return -1;
 	}
 	

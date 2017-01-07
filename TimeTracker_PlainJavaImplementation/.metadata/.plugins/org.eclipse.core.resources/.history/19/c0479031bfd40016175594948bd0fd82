@@ -1,0 +1,51 @@
+package at.fhv.timetracker.task;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TaskDAO {
+	
+	private Connection c = null;
+	private Statement stmt = null;
+	
+	private void init(){
+		Class.forName("org.sqlite.JDBC");
+	}
+	
+	public ArrayList<Task> getAllTasks(){
+		//TODO: Body
+		if(c == null){
+			init();
+		}
+		return null;
+	}
+
+	public int addTask(Task newTask){
+		//TODO: Body
+		return -1;
+	}
+	
+	public String getStringFormByID(int id){
+		//TODO: Body
+		return "";
+	}
+	
+	public Task getTaskByID(int id){
+		//TODO: Body
+		
+		return null;
+	}
+	
+	public int deleteTask(int id){
+		//TODO: Body
+		return -1;
+	}
+	
+	public int deleteTask(Task taskToDel){
+		//TODO: Body
+		return deleteTask(taskToDel.getId());
+	}
+	
+}

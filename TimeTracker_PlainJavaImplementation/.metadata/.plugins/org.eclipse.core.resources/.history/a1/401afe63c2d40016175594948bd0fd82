@@ -1,0 +1,86 @@
+package at.fhv.timetracker.task;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TaskDAO {
+	
+	private Connection c = null;
+	private Statement stmt = null;
+	
+	private void init(){
+		try {
+			Class.forName("org.sqlite.JDBC");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
+			c.setAutoCommit(true);
+			stmt = c.createStatement();
+			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Tasks" +
+									"(ID					PRIMARY KEY	NOT NULL, " +
+									"STARTTIME				TEXT	NOT NULL, "
+									+ "ENDTIME				TEXT	NOT NULL, "
+									+ "DESCRIPTION			TEXT	NOT NULL, "
+									+ "CONTAININGPROJECT	INTEGER	NOT NULL, "
+									+ "CREATOR				INTEGER	NOT NULL)";
+			stmt.executeUpdate(sqlCreateTable);
+			stmt.close();
+			stmt = null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Task> getAllTasks(){
+		if(c == null){
+			init();
+		}
+		
+		ArrayList<Task> allTasks = new ArrayList<>();
+		
+		try {
+			stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Tasks");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return allTasks;
+	}
+
+	public int addTask(Task newTask){
+		//TODO: Body
+		return -1;
+	}
+	
+	public String getStringFormByID(int id){
+		//TODO: Body
+		return "";
+	}
+	
+	public Task getTaskByID(int id){
+		//TODO: Body
+		
+		return null;
+	}
+	
+	public int deleteTask(int id){
+		//TODO: Body
+		return -1;
+	}
+	
+	public int deleteTask(Task taskToDel){
+		//TODO: Body
+		return deleteTask(taskToDel.getId());
+	}
+	
+}

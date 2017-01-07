@@ -1903,3 +1903,114 @@ java.lang.IllegalStateException: startLine (87) does not match endLine (88)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+!SESSION 2017-01-07 10:39:14.701 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_AT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jdt.core 4 2 2017-01-07 10:40:19.709
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core".
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.InternalJob.setSystem(InternalJob.java:498)
+	at org.eclipse.core.runtime.jobs.Job.setSystem(Job.java:771)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.postAsyncUpdate(PackageExplorerContentProvider.java:168)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.executeRunnables(PackageExplorerContentProvider.java:150)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.elementChanged(PackageExplorerContentProvider.java:126)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1504)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1463)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:765)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:185)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:119)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:95)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:420)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:174)
+
+!ENTRY org.eclipse.jdt.core 4 4 2017-01-07 10:40:19.751
+!MESSAGE Exception occurred in listener of Java element change notification
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.InternalJob.setSystem(InternalJob.java:498)
+	at org.eclipse.core.runtime.jobs.Job.setSystem(Job.java:771)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.postAsyncUpdate(PackageExplorerContentProvider.java:168)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.executeRunnables(PackageExplorerContentProvider.java:150)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerContentProvider.elementChanged(PackageExplorerContentProvider.java:126)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1504)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1463)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:765)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:790)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:128)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:110)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:90)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:185)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:119)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:136)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:95)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:420)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:174)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-01-07 10:49:58.482
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-01-07 10:49:58.484
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-01-07 10:50:00.130
+!MESSAGE Full project indexing required:
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/aopalliance-repackaged-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-api-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-locator-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/hk2-utils-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.inject-2.5.0-b30.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-client.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-common.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-container-servlet.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-guava-2.25.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-media-jaxb.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/jersey-server.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/persistence-api-1.0.jar
+  [+] /home/thomas/TimeTracker/TimeTracker_PlainJavaImplementation/PJI2/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-01-07 10:52:54.575
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-01-07 10:52:54.576
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
