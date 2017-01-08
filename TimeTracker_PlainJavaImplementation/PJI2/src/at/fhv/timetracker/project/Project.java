@@ -70,9 +70,15 @@ public class Project {
 	///////////////////////////////////////////////
 	// Other
 	///////////////////////////////////////////////
-	public String getTotalProjectWorkTime(){
-		//TODO Body
-		return "None ;-)";
+	public long getTotalProjectWorkTime(){
+		long totWorkTime = 0;
+		ArrayList<Task> allTasks = new ArrayList<>(assignedTasks);
+		
+		for(Task entry : allTasks){
+			totWorkTime += entry.getWorkTime();
+		}
+		
+		return totWorkTime;
 	}
 	
 	public boolean equals(Project otherProject){

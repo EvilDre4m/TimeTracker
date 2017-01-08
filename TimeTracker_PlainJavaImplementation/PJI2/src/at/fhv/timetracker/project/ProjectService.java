@@ -11,16 +11,16 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.user.User;
 import at.fhv.timetracker.user.UserDAO;
 
 @Path("/ProjectService")
 public class ProjectService {
 
-	private UserDAO userDao = new UserDAO();
-	private ProjectDAO projectDao = new ProjectDAO();
 	private static final String SUCCESS = "<result>success</result>";
 	private static final String FAIL = "<result>failure</result>";
 	
@@ -40,7 +40,7 @@ public class ProjectService {
 		}
 		
 		User owningUser = null;
-		ArrayList<User> allUsers = userDao.getAllUsers();
+		ArrayList<User> allUsers = Globals.userDao.getAllUsers();
 		for(User user : allUsers){
 			if(user.getId() == ouId){
 				owningUser = new User(user);
@@ -54,7 +54,7 @@ public class ProjectService {
 		}
 		
 		Project newProject = new Project(owningUser, null, description, name, id);
-		int rc = projectDao.addProject(newProject);
+		int rc = Globals.projectDao.addProject(newProject);
 		if(rc == 0){
 			return SUCCESS;
 		} else {
@@ -67,14 +67,14 @@ public class ProjectService {
 	@Path("/projects")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public Project searchProject(@FormParam("desc") String searchDescr){
+	public Project searchProject(@QueryParam("desc") String searchDescr){
 		//searchDescr = Description to search for
 		
 		if(searchDescr.equals("")){
 			return null;
 		}
 		
-		ArrayList<Project> allProjects = projectDao.getAllProjects();
+		ArrayList<Project> allProjects = Globals.projectDao.getAllProjects();
 		for(Project proj : allProjects){
 			if(proj.getDescription().contains(searchDescr) || proj.getName().contains(searchDescr) ){
 				return new Project(proj);
@@ -92,7 +92,7 @@ public class ProjectService {
 			@FormParam("owningUserId") Integer ouId,
 			@FormParam("description") String description,
 			@FormParam("name") String name){
-		projectDao.deleteProject(id);
+		Globals.projectDao.deleteProject(id);
 		return addProject(id, ouId, description, name);
 	}
 	
@@ -101,13 +101,15 @@ public class ProjectService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public void deleteProject(@FormParam("id") Integer id){
-		projectDao.deleteProject(id);
+		Globals.projectDao.deleteProject(id);
 	}
 	
-	
+	@GET
+	@Path("/projects/0")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public List<Project> getAllProjects(){
-		//TODO: Signature
-		return projectDao.getAllProjects();
+		return Globals.projectDao.getAllProjects();
 	}
 	
 }

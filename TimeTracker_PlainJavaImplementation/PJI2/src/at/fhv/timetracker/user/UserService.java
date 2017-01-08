@@ -8,19 +8,20 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
 
 import at.fhv.timetracker.user.User;
-import at.fhv.timetracker.user.UserDAO;;
+import at.fhv.timetracker.user.UserDAO;
 
+import at.fhv.timetracker.common.Globals;
 
 @Path("/UserService")
 public class UserService {
 	
 	private static boolean loggedOn = false;
 	
-	UserDAO userDAO = new UserDAO();
 	private static final String SUCCESS = "<result>success</result>";
 	private static final String FAIL = "<result>failure</result>";
 	
@@ -47,7 +48,7 @@ public class UserService {
 		
 		User newUser = new User(firstname, lastname, email, password, id);
 		
-		int result = userDAO.addUser(newUser);
+		int result = Globals.userDao.addUser(newUser);
 		if(result == 0){
 			return SUCCESS;
 		}
@@ -58,13 +59,13 @@ public class UserService {
 	@Path("/users")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public String loginUser(@FormParam("email") String email, @FormParam("password") String password){
+	public String loginUser(@QueryParam("email") String email, @QueryParam("password") String password){
 		if(UserService.isLoggedOn()){
 			//already a user logged on
 			return FAIL;
 		}
 		
-		ArrayList<User> allUsers = userDAO.getAllUsers();
+		ArrayList<User> allUsers = Globals.userDao.getAllUsers();
 		User userToLogin = null;
 		for(User entry : allUsers){
 			if(entry.getEmail().equals(email)){
@@ -88,10 +89,10 @@ public class UserService {
 	}
 	
 	@DELETE
-	@Path("/users}")
+	@Path("/users")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public String logoutUser(@FormParam("email") String email){
+	public String logoutUser(@QueryParam("email") String email){
 		if(email == null || email.equals("")){
 			return FAIL;
 		}
@@ -100,9 +101,12 @@ public class UserService {
 		return SUCCESS;
 	}
 	
+	@GET
+	@Path("/users/0")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public List<User> getAllUsers(){
-		//TODO: Signature
-		return userDAO.getAllUsers();
+		return Globals.userDao.getAllUsers();
 	}
 	
 }

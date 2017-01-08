@@ -13,15 +13,17 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.common.timeStamp"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.project.Project"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.project.ProjectDAO"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.user.UserDAO"/>
 <fullyQualifiedTypeName name="at.fhv.timetracker.user.User"/>
 <fullyQualifiedTypeName name="at.fhv.timetracker.task.TaskService"/>
 <fullyQualifiedTypeName name="at.fhv.timetracker.task.Task"/>
-<fullyQualifiedTypeName name="at.fhv.timetracker.task.TaskDAO"/>
 <fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.task.TaskDAO"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.project.ProjectDAO"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.user.UserDAO"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.common.Globals"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.project.Project"/>
+<fullyQualifiedTypeName name="at.fhv.timetracker.common.timeStamp"/>
 </qualifiedTypeNameHistroy>

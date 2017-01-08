@@ -1,0 +1,5 @@
+package at.fhv.timetracker.common;
+
+public class Globals {
+
+}

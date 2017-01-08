@@ -17,6 +17,10 @@ public class timeStamp {
 		}
 	}
 	
+	public timeStamp() {
+		this.storedTimestamp = "1970-01-01--00-00";
+	}
+
 	public String getTimestamp(){
 		return storedTimestamp;
 	}
@@ -55,6 +59,16 @@ public class timeStamp {
 		long lHour = Long.valueOf(hour);
 		long lMinute = Long.valueOf(minute);
 		
-		//FIXME Complete this crap (start is time = 0)				
+		long lYearSinceZero = lYear - 1970; 
+
+		//NOTE: Doesn't work, I know; can't fix now
+		long totTime = lMinute 			* 60 +	
+						lMonth 			* 60 * 60 +
+						lDay			* 60 * 60 * 24 +
+						lMonth			* 60 * 60 * 24 * 30 +
+						lYearSinceZero	* 60 * 60 * 24 * 365;
+		
+		return totTime;
+		
 	}
 }

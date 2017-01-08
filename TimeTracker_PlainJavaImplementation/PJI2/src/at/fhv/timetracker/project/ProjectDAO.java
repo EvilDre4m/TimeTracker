@@ -3,6 +3,7 @@ package at.fhv.timetracker.project;
 import java.sql.*;
 import java.util.ArrayList;
 
+import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.task.Task;
 import at.fhv.timetracker.task.TaskDAO;
 import at.fhv.timetracker.user.User;
@@ -13,10 +14,9 @@ public class ProjectDAO {
 	
 	private Connection c = null;
 	private Statement stmt = null;
-	private UserDAO userDao = new UserDAO();
-	private TaskDAO taskDao = new TaskDAO();
 	
 	private void init(){
+		
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e) {
@@ -30,7 +30,7 @@ public class ProjectDAO {
 			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Projects" + 
 									"(ID	PRIMARY KEY	NOT NULL, " +
 									"OWNINGUSER		INTEGER	NOT NULL, " + 
-									"DESCRIPTION	TEXT	NOT NULL" +
+									"DESCRIPTION	TEXT	NOT NULL, " +
 									"NAME			TEXT	NOT NULL)";
 			stmt.executeUpdate(sqlCreateTable);
 			stmt.close();
@@ -68,8 +68,11 @@ public class ProjectDAO {
 		}
 		
 		ArrayList<Task> affectedTasks = getProjectByID(id).getAssignedTasks();
-		for(Task entry : affectedTasks){
-			taskDao.deleteTask(entry);
+		
+		if(affectedTasks != null){
+			for(Task entry : affectedTasks){
+				Globals.taskDao.deleteTask(entry);
+			}
 		}
 		
 		try {
@@ -85,7 +88,7 @@ public class ProjectDAO {
 		};
 		
 		
-		return -1;
+		return 0;
 	}
 	
 	public ArrayList<Project> getAllProjects(){
@@ -102,15 +105,14 @@ public class ProjectDAO {
 			int id;
 			int owningUserID;
 			User owningUser;
-			ArrayList<Task> assignedTasks = null;
 			String description;
 			String name;
+			
 			
 			while(rs.next()){
 				id = rs.getInt("ID");
 				owningUserID = rs.getInt("OWNINGUSER");
-				owningUser = userDao.getUserByID(owningUserID);
-				//TODO: get assigned tasks
+				owningUser = Globals.userDao.getUserByID(owningUserID);
 				description = rs.getString("DESCRIPTION");
 				name = rs.getString("NAME");
 				
@@ -120,6 +122,10 @@ public class ProjectDAO {
 			rs.close();
 			stmt.close();
 			stmt = null;
+			
+			for(Project entry : projects){
+				entry.setAssignedTasks( Globals.taskDao.getTasksByProject( entry.getId() ) );
+			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

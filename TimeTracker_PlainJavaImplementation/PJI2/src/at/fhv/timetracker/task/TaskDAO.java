@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.common.timeStamp;
 import at.fhv.timetracker.project.Project;
 import at.fhv.timetracker.project.ProjectDAO;
@@ -16,9 +18,6 @@ public class TaskDAO {
 	
 	private Connection c = null;
 	private Statement stmt = null;
-	
-	private ProjectDAO projectDao = new ProjectDAO();
-	private UserDAO userDao = new UserDAO();
 	
 	private void init(){
 		try {
@@ -44,6 +43,19 @@ public class TaskDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public ArrayList<Task> getTasksByProject(int id){
+		ArrayList<Task> tasks = new ArrayList<>();
+		ArrayList<Task> allTasks = getAllTasks();
+		
+		for (Task entry : allTasks){
+			if(entry.getId() == id){
+				tasks.add( new Task(entry) );
+			}
+		}
+		
+		return tasks;
 	}
 	
 	public ArrayList<Task> getAllTasks(){
@@ -90,13 +102,13 @@ public class TaskDAO {
 				description = rs.getString("DESCRIPTION");
 				
 				containingProjectID = rs.getInt("CONTAININGPROJECT");
-				containingProject = projectDao.getProjectByID(containingProjectID);
+				containingProject = Globals.projectDao.getProjectByID(containingProjectID);
 				if(containingProject == null){
 					continue;
 				}
 				
 				creatingUserID = rs.getInt("CREATOR");
-				creatingUser = userDao.getUserByID(creatingUserID);
+				creatingUser = Globals.userDao.getUserByID(creatingUserID);
 				if(creatingUser == null){
 					continue;
 				}
@@ -179,7 +191,7 @@ public class TaskDAO {
 			return -1;
 		}
 		
-		return -1;
+		return 0;
 	}
 	
 	public int deleteTask(Task taskToDel){

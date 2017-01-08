@@ -22,6 +22,15 @@ public class Task {
 		this.setId(id);
 	}
 
+	public Task(Task task) {
+		this.updateStartTime(task.getStartTime());
+		this.updateEndTime(task.getEndTime());
+		this.setDescription(task.getDescription());
+		this.updateContainingProject(task.getContainingProject());
+		this.setCreator(task.getCreator());
+		this.setId(task.getId());
+	}
+
 	public timeStamp getStartTime() {
 		return startTime;
 	}
@@ -84,6 +93,15 @@ public class Task {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public long getWorkTime(){
+		if(startTime == null || endTime == null){
+			return -1;
+		}
+		
+		return this.endTime.getInSeconds() - this.startTime.getInSeconds();
+		
 	}
 	
 }

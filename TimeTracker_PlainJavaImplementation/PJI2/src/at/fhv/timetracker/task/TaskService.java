@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import at.fhv.timetracker.common.timeStamp;
@@ -17,13 +18,9 @@ import at.fhv.timetracker.project.Project;
 import at.fhv.timetracker.project.ProjectDAO;
 import at.fhv.timetracker.user.User;
 import at.fhv.timetracker.user.UserDAO;
-
+import at.fhv.timetracker.common.Globals;
 @Path("/TaskService")
 public class TaskService {
-	
-	private ProjectDAO projectDao = new ProjectDAO();
-	private UserDAO userDao = new UserDAO();
-	private TaskDAO taskDao = new TaskDAO();
 	
 	private static final String SUCCESS = "<result>success</result>";
 	private static final String FAIL = "<result>failure</result>";
@@ -39,27 +36,29 @@ public class TaskService {
 			@FormParam("containingProjID") int contProjID,
 			@FormParam("creatingUserID") int creatUserID){
 		
-		timeStamp start;
+		timeStamp start = null;
 		try{
 			start = new timeStamp(startTime);
 		} catch (IllegalArgumentException e){
-			return FAIL;
+			start = new timeStamp();
+			//return FAIL;
 		}
 		
 		
-		timeStamp stop;
+		timeStamp stop = null;
 		try{
 			stop = new timeStamp(startTime);
 		} catch (IllegalArgumentException e){
-			return FAIL;
+			stop = new timeStamp();
+			//return FAIL;
 		}
 		
-		Project containingProject = projectDao.getProjectByID(contProjID);
-		User creatingUser = userDao.getUserByID(creatUserID);
+		Project containingProject = Globals.projectDao.getProjectByID(contProjID);
+		User creatingUser = Globals.userDao.getUserByID(creatUserID);
 		
 		Task newTask = new Task(start, stop, description, containingProject, creatingUser, id);
 		
-		int retVal = taskDao.addTask(newTask);
+		int retVal = Globals.taskDao.addTask(newTask);
 		if(retVal == 0){
 			return SUCCESS;
 		} else {
@@ -68,10 +67,10 @@ public class TaskService {
 	}
 	
 	@PUT
-	@Path("/tasks/{taskid}")
+	@Path("/tasks/edit")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public String editTask(@PathParam("taskid") int taskId,
+	public String editTask(@FormParam("taskid") int taskId,
 			//NOTE: Above PathParam really should be a PathParam!
 			@FormParam("startTime") String startTime,
 			@FormParam("endTime") String endTime,
@@ -96,17 +95,17 @@ public class TaskService {
 	@Path("/tasks")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public Task searchTask(@FormParam("id") int id){
-		Task retTask = taskDao.getTaskByID(id);
+	public Task searchTask(@QueryParam("id") int id){
+		Task retTask = Globals.taskDao.getTaskByID(id);
 		return retTask;
 	}
 	
 	@DELETE
-	@Path("/tasks}")
+	@Path("/tasks")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public String deleteTask(@FormParam("id") int id){
-		int rc = taskDao.deleteTask(id);
+		int rc = Globals.taskDao.deleteTask(id);
 		if(rc == 0){
 			return SUCCESS;
 		} else {
@@ -114,8 +113,11 @@ public class TaskService {
 		}
 	}
 	
+	@GET
+	@Path("/tasks/0")
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public List<Task> getAllTasks(){
-		//TODO: Signature
-		return taskDao.getAllTasks();
+		return Globals.taskDao.getAllTasks();
 	}
 }
