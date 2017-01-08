@@ -2,7 +2,6 @@ package at.fhv.timetracker.task;
 
 import java.util.List;
 
-import javax.websocket.server.PathParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
@@ -13,12 +12,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.common.timeStamp;
 import at.fhv.timetracker.project.Project;
-import at.fhv.timetracker.project.ProjectDAO;
 import at.fhv.timetracker.user.User;
-import at.fhv.timetracker.user.UserDAO;
-import at.fhv.timetracker.common.Globals;
+import at.fhv.timetracker.user.UserService;
+
+
 @Path("/TaskService")
 public class TaskService {
 	
@@ -36,12 +36,15 @@ public class TaskService {
 			@FormParam("containingProjID") int contProjID,
 			@FormParam("creatingUserID") int creatUserID){
 		
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
+		
 		timeStamp start = null;
 		try{
 			start = new timeStamp(startTime);
 		} catch (IllegalArgumentException e){
-			start = new timeStamp();
-			//return FAIL;
+			return FAIL;
 		}
 		
 		
@@ -49,8 +52,11 @@ public class TaskService {
 		try{
 			stop = new timeStamp(startTime);
 		} catch (IllegalArgumentException e){
-			stop = new timeStamp();
-			//return FAIL;
+			return FAIL;
+		}
+		
+		if(description.equals("") || contProjID == 0){
+			return FAIL;
 		}
 		
 		Project containingProject = Globals.projectDao.getProjectByID(contProjID);
@@ -78,6 +84,30 @@ public class TaskService {
 			@FormParam("containingProjID") int contProjID,
 			@FormParam("creatingUserID") int creatUserID){
 		
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
+		
+		if(endTime.equals("") || startTime.equals("") || description.equals("")){
+			return FAIL;
+		}
+		//The following start and stop vars are created to check if the timestamp strings are valid
+		@SuppressWarnings("unused")
+		timeStamp start = null;
+		try{
+			start = new timeStamp(startTime);
+		} catch (IllegalArgumentException e){
+			return FAIL;
+		}
+		@SuppressWarnings("unused")
+		timeStamp stop = null;
+		try{
+			stop = new timeStamp(startTime);
+		} catch (IllegalArgumentException e){
+			return FAIL;
+		}
+		
+		
 		String retString = deleteTask(taskId);
 		if(retString.equals(FAIL)){
 			return FAIL;
@@ -96,6 +126,9 @@ public class TaskService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public Task searchTask(@QueryParam("id") int id){
+		if(!UserService.isLoggedOn()){
+			return null;
+		}
 		Task retTask = Globals.taskDao.getTaskByID(id);
 		return retTask;
 	}
@@ -105,6 +138,9 @@ public class TaskService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public String deleteTask(@FormParam("id") int id){
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
 		int rc = Globals.taskDao.deleteTask(id);
 		if(rc == 0){
 			return SUCCESS;
@@ -118,6 +154,9 @@ public class TaskService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public List<Task> getAllTasks(){
+		if(!UserService.isLoggedOn()){
+			return null;
+		}
 		return Globals.taskDao.getAllTasks();
 	}
 }

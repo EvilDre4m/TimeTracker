@@ -44,7 +44,7 @@ public class timeStamp {
 	
 	public long getInSeconds(){
 		//YYYY-MM-DD--HH-MM
-		//0    5  8   12 15
+		//0    5  8   12 15  <-- indices
 		String stringRep = new String(storedTimestamp);
 		
 		String year = stringRep.substring(0, 4);
@@ -63,10 +63,10 @@ public class timeStamp {
 
 		//NOTE: Doesn't work, I know; can't fix now
 		long totTime = lMinute 			* 60 +	
-						lMonth 			* 60 * 60 +
+						lHour			* 60 * 60 +
 						lDay			* 60 * 60 * 24 +
 						lMonth			* 60 * 60 * 24 * 30 +
-						lYearSinceZero	* 60 * 60 * 24 * 365;
+						lYearSinceZero	* 60 * 60 * 24 * 30 * 365;
 		
 		return totTime;
 		

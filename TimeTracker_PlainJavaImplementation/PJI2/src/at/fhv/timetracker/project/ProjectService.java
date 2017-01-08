@@ -15,8 +15,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import at.fhv.timetracker.common.Globals;
+import at.fhv.timetracker.task.Task;
 import at.fhv.timetracker.user.User;
-import at.fhv.timetracker.user.UserDAO;
+import at.fhv.timetracker.user.UserService;
 
 @Path("/ProjectService")
 public class ProjectService {
@@ -33,7 +34,11 @@ public class ProjectService {
 			@FormParam("description") String description,
 			@FormParam("name") String name){
 		
-		if(id == null || ouId == null || description == null){
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
+		
+		if(id == 0 || ouId == null || description == null){
 			return FAIL;
 		} else if (name.equals("")) {
 			return FAIL;
@@ -67,22 +72,34 @@ public class ProjectService {
 	@Path("/projects")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public Project searchProject(@QueryParam("desc") String searchDescr){
+	public Project searchProject(@QueryParam("searchString") String searchString){
 		//searchDescr = Description to search for
 		
-		if(searchDescr.equals("")){
+		if(!UserService.isLoggedOn()){
+			return null;
+		}
+		if(searchString.equals("")){
 			return null;
 		}
 		
 		ArrayList<Project> allProjects = Globals.projectDao.getAllProjects();
 		for(Project proj : allProjects){
-			if(proj.getDescription().contains(searchDescr) || proj.getName().contains(searchDescr) ){
+			if(proj.getDescription().contains(searchString) || proj.getName().contains(searchString) || proj.getOwningUser().getFirstName().contains(searchString)
+					|| proj.getOwningUser().getLastName().contains(searchString)){
 				return new Project(proj);
+			}
+			
+			ArrayList<Task> assingedTasks = proj.getAssignedTasks();
+			for(Task task : assingedTasks){
+				if(task.getStartTime().getTimestamp().equals(searchString) || task.getEndTime().equals(searchString)){
+					return new Project(proj);
+				}
 			}
 		}
 		
 		return null;
 	}
+	
 	
 	@POST
 	@Path("/projects")
@@ -92,6 +109,14 @@ public class ProjectService {
 			@FormParam("owningUserId") Integer ouId,
 			@FormParam("description") String description,
 			@FormParam("name") String name){
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
+		
+		if(name.equals("")){
+			return FAIL;
+		}
+		
 		Globals.projectDao.deleteProject(id);
 		return addProject(id, ouId, description, name);
 	}
@@ -100,8 +125,16 @@ public class ProjectService {
 	@Path("/projects")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public void deleteProject(@FormParam("id") Integer id){
-		Globals.projectDao.deleteProject(id);
+	public String deleteProject(@FormParam("id") Integer id){
+		if(!UserService.isLoggedOn()){
+			return FAIL;
+		}
+		int rc = Globals.projectDao.deleteProject(id);
+		if(rc == 0){
+			return SUCCESS;
+		} else {
+			return FAIL;
+		}
 	}
 	
 	@GET
@@ -109,6 +142,10 @@ public class ProjectService {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public List<Project> getAllProjects(){
+		if(!UserService.isLoggedOn()){
+			return null;
+		}
+		
 		return Globals.projectDao.getAllProjects();
 	}
 	

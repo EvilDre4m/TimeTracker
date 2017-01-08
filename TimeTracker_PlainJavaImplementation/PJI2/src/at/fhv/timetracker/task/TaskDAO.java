@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.common.timeStamp;
 import at.fhv.timetracker.project.Project;
-import at.fhv.timetracker.project.ProjectDAO;
 import at.fhv.timetracker.user.User;
-import at.fhv.timetracker.user.UserDAO;
 
 public class TaskDAO {
 	
@@ -153,12 +151,6 @@ public class TaskDAO {
 		
 		return 0;
 	}
-	
-	
-//	public String getStringFormByID(int id){
-//		
-//		return "";
-//	}
 	
 	
 	public Task getTaskByID(int id){

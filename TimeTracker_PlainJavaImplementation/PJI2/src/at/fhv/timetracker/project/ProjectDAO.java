@@ -1,15 +1,16 @@
 package at.fhv.timetracker.project; 
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import at.fhv.timetracker.common.Globals;
 import at.fhv.timetracker.task.Task;
-import at.fhv.timetracker.task.TaskDAO;
 import at.fhv.timetracker.user.User;
-import at.fhv.timetracker.user.UserDAO;
 
-//FIXME: Test all this crap
 public class ProjectDAO {
 	
 	private Connection c = null;
@@ -116,7 +117,7 @@ public class ProjectDAO {
 				description = rs.getString("DESCRIPTION");
 				name = rs.getString("NAME");
 				
-				projects.add( new Project(owningUser, null, description, name, owningUserID) );
+				projects.add( new Project(owningUser, null, description, name, id) );
 			}
 			
 			rs.close();
