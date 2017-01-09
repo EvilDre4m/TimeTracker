@@ -1,0 +1,19 @@
+UserService:
+  registerUser --> OK
+  getAllUsers  --> OK
+  loginUser    --> OK
+  logoutUser   --> OK
+
+ProjectService:
+  addProject      --> OK
+  editProject     --> OK
+  searchProject
+  getAllProjects
+  deleteProject
+
+TaskService:
+  createTask    --> OK
+  editTask      --> OK
+  getAllTasks
+  searchTask
+  deleteTask

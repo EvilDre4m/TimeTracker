@@ -14,6 +14,14 @@ public class User {
 		this.setPassword(password);
 		this.setId(id);
 	}
+	
+	public User(User user){
+		this.setId(user.getId());
+		this.setFirstName(user.getFirstName());
+		this.setLastName(user.getLastName());
+		this.setEmail(user.getEmail());
+		this.setPassword(user.getPassword());
+	}
 
 	public String getFirstName() {
 		return firstName;

@@ -1,0 +1,50 @@
+package at.fhv.timetracker.project; 
+
+import java.sql.*;
+import java.util.ArrayList;
+
+public class ProjectDAO {
+	
+	Connection c = null;
+	Statement stmt = null;
+	
+	private void init(){
+		try {
+			Class.forName("org.sqlite.JDBC");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
+			c.setAutoCommit(true);
+			stmt = c.createStatement();
+			//TODO: String for creating table
+			String sqlCreateTable = "";
+			stmt.executeUpdate(sqlCreateTable);
+			stmt.close();
+			stmt = null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public int addProject(Project newProject){
+		if(c == null){
+			init();
+		}
+		
+		//TODO Body
+		return 0;
+	}
+	
+	public int deleteProject(int id){
+		//TODO: Body
+	}
+	
+	public ArrayList<Project> getAllProjects(){
+		//TODO: Body
+		return null;
+	}
+
+}

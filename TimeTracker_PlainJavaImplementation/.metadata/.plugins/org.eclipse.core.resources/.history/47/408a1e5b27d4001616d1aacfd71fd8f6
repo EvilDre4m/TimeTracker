@@ -1,0 +1,29 @@
+package at.fhv.timetracker.task;
+
+public class TaskDAO {
+
+	public int addTask(Task newTask){
+		//TODO: Body
+		return -1;
+	}
+	
+	public String getStringFormByID(int id){
+		//TODO: Body
+		return "";
+	}
+	
+	public Task getTaskByID(int id){
+		//TODO: Body
+		
+		return null;
+	}
+	
+	public int deleteTask(int id){
+		return -1;
+	}
+	
+	public int deleteTask(Task taskToDel){
+		return deleteTask(taskToDel.getId());
+	}
+	
+}

@@ -1,0 +1,9 @@
+package at.fhv.timetracker.task;
+
+public class TaskDAO {
+
+	public int addTask(Task newTask){
+		return -1;
+	}
+	
+}

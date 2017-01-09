@@ -18,11 +18,11 @@ public class UserDAO {
 			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
 			c.setAutoCommit(true);
 			stmt = c.createStatement();
-			String sqlCreateTable = "CREATE TABLE IF NOT EXTSTS Users" +
-									"(ID INT PRIMARY KEY	NOT NULL" +
-									"FIRSTNAME		TEXT	NOT NULL" +
-									"LASTNAME		TEXT	NOT NULL" +
-									"EMAIL			TEXT	NOT NULL" +
+			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Users" +
+									"(ID INT PRIMARY KEY	NOT NULL, " +
+									"FIRSTNAME		TEXT	NOT NULL, " +
+									"LASTNAME		TEXT	NOT NULL, " +
+									"EMAIL			TEXT	NOT NULL, " +
 									"PASSWORD		TEXT	NOT NULL)";
 			stmt.executeUpdate(sqlCreateTable);
 			stmt.close();
@@ -51,6 +51,7 @@ public class UserDAO {
 			stmt = null;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return -1;
 		}
 		
 		return 0;
@@ -93,5 +94,14 @@ public class UserDAO {
 		return users;
 			
 	}
-	
+
+	public User getUserByID(int id){
+		ArrayList<User> allUsers = getAllUsers();
+		for(User entry : allUsers){
+			if(entry.getId() == id){
+				return entry;
+			}
+		}
+		return null;
+	}
 }

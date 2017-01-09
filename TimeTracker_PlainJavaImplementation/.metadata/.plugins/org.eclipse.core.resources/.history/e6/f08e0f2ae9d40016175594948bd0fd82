@@ -1,0 +1,201 @@
+package at.fhv.timetracker.task;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import at.fhv.timetracker.common.timeStamp;
+import at.fhv.timetracker.project.Project;
+import at.fhv.timetracker.project.ProjectDAO;
+import at.fhv.timetracker.user.User;
+import at.fhv.timetracker.user.UserDAO;
+
+public class TaskDAO {
+	
+	private Connection c = null;
+	private Statement stmt = null;
+	
+	private ProjectDAO projectDao = new ProjectDAO();
+	private UserDAO userDao = new UserDAO();
+	
+	private void init(){
+		try {
+			Class.forName("org.sqlite.JDBC");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
+			c.setAutoCommit(true);
+			stmt = c.createStatement();
+			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Tasks" +
+									"(ID					PRIMARY KEY	NOT NULL, " +
+									"STARTTIME				TEXT	NOT NULL, "
+									+ "ENDTIME				TEXT	NOT NULL, "
+									+ "DESCRIPTION			TEXT	NOT NULL, "
+									+ "CONTAININGPROJECT	INTEGER	NOT NULL, "
+									+ "CREATOR				INTEGER	NOT NULL)";
+			stmt.executeUpdate(sqlCreateTable);
+			stmt.close();
+			stmt = null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Task> getTasksByProject(int id){
+		ArrayList<Task> tasks = new ArrayList<>();
+		ArrayList<Task> allTasks = getAllTasks();
+		
+		for (Task entry : allTasks){
+			if(entry.getId() == id){
+				tasks.add( new Task(entry) );
+			}
+		}
+		
+	}
+	
+	public ArrayList<Task> getAllTasks(){
+		if(c == null){
+			init();
+		}
+		
+		ArrayList<Task> allTasks = new ArrayList<>();
+		
+		try {
+			stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Tasks");
+			
+			int id;
+			String startTimeString;
+			timeStamp startTime;
+			String endTimeString;
+			timeStamp endTime;
+			String description;
+			int containingProjectID;
+			Project containingProject;
+			int creatingUserID;
+			User creatingUser;
+			
+			while(rs.next()){
+				id = rs.getInt("ID");
+				
+				startTimeString = rs.getString("STARTTIME");
+				try{
+					startTime = new timeStamp(startTimeString);
+				} catch (IllegalArgumentException e){
+					e.printStackTrace();
+					continue;
+				}
+				
+				endTimeString = rs.getString("ENDTIME");
+				try{
+					endTime = new timeStamp(endTimeString);
+				} catch (IllegalArgumentException e){
+					e.printStackTrace();
+					continue;
+				}
+				
+				description = rs.getString("DESCRIPTION");
+				
+				containingProjectID = rs.getInt("CONTAININGPROJECT");
+				containingProject = projectDao.getProjectByID(containingProjectID);
+				if(containingProject == null){
+					continue;
+				}
+				
+				creatingUserID = rs.getInt("CREATOR");
+				creatingUser = userDao.getUserByID(creatingUserID);
+				if(creatingUser == null){
+					continue;
+				}
+				
+				allTasks.add(
+						new Task(startTime, endTime, description, containingProject, creatingUser, id));
+		
+				rs.close();
+				stmt.close();
+				stmt = null;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return allTasks;
+	}
+
+	
+	public int addTask(Task newTask){
+		if(c == null){
+			init();
+		}
+		
+		try {
+			stmt = c.createStatement();
+			String sqlInsertTask = "INSERT INTO Tasks (ID, STARTTIME, ENDTIME, DESCRIPTION, CONTAININGPROJECT, CREATOR) "
+					+ "VALUES (" + newTask.getId() + ",\'" + newTask.getStartTime().getTimestamp() 
+					+ "\',\'" + newTask.getEndTime().getTimestamp() + "\', \'" + newTask.getDescription()
+					+ "\'," + newTask.getContainingProject().getId() + "," + newTask.getCreator().getId()
+					+ ");";
+			
+			stmt.executeUpdate(sqlInsertTask);
+			stmt.close();
+			stmt = null;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return -1;
+		}
+		
+		return 0;
+	}
+	
+	
+//	public String getStringFormByID(int id){
+//		
+//		return "";
+//	}
+	
+	
+	public Task getTaskByID(int id){
+		ArrayList<Task> allTasks = getAllTasks();
+		
+		for(Task entry : allTasks){
+			if(entry.getId() == id){
+				return entry;
+			}
+		}
+		
+		return null;
+	}
+	
+	public int deleteTask(int id){
+		if(c == null){
+			init();
+		}
+		
+		try {
+			stmt = c.createStatement();
+			String sqlDelTask = "DELETE FROM Tasks \n" +
+								"WHERE ID = " + id + ";" ;
+			
+			stmt.executeUpdate(sqlDelTask);
+			stmt.close();
+			stmt = null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return -1;
+		}
+		
+		return -1;
+	}
+	
+	public int deleteTask(Task taskToDel){
+		return deleteTask(taskToDel.getId());
+	}
+	
+}

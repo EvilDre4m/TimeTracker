@@ -5,13 +5,13 @@ import at.fhv.timetracker.project.Project;
 import at.fhv.timetracker.user.User;
 
 public class Task {
-
+	
+	private int id;
 	private timeStamp startTime;
 	private timeStamp endTime;
 	private String description;
 	private Project containingProject;
 	private User creator;
-	private int id;
 	
 	public Task(timeStamp startTime, timeStamp endTime, String description, Project project, User creator, int id){
 		this.updateStartTime(startTime);
@@ -20,6 +20,15 @@ public class Task {
 		this.updateContainingProject(project);
 		this.setCreator(creator);
 		this.setId(id);
+	}
+
+	public Task(Task task) {
+		this.updateStartTime(task.getStartTime());
+		this.updateEndTime(task.getEndTime());
+		this.setDescription(task.getDescription());
+		this.updateContainingProject(task.getContainingProject());
+		this.setCreator(task.getCreator());
+		this.setId(task.getId());
 	}
 
 	public timeStamp getStartTime() {
@@ -84,6 +93,15 @@ public class Task {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public long getWorkTime(){
+		if(startTime == null || endTime == null){
+			return -1;
+		}
+		
+		return this.endTime.getInSeconds() - this.startTime.getInSeconds();
+		
 	}
 	
 }

@@ -1,0 +1,15 @@
+package at.fhv.timetracker.task;
+
+public class TaskDAO {
+
+	public int addTask(Task newTask){
+		//TODO: Body
+		return -1;
+	}
+	
+	public String getStringFromByID(int id){
+		//TODO: Body
+		return "";
+	}
+	
+}
