@@ -15,7 +15,7 @@ public class Project {
 	
 	public Project(User owningUser, ArrayList<Task> assignedTasks, String description, String name, int id){
 		this.setOwningUser(owningUser);
-		this.assignedTasks = assignedTasks;		//TODO wiso nicht set?
+		this.assignedTasks = assignedTasks;
 		this.setDescription(description);
 		this.setName(name);
 		this.setId(id);

@@ -173,7 +173,7 @@ public class Main {
 	
 	public static void main(String[] args){
 		init();
-		//test_registerUser();
+		test_registerUser();
 		//test_getAllUsers();
 		//test_loginUser();
 		//test_logoutUser();
@@ -185,7 +185,7 @@ public class Main {
 		//test_deleteProject();
 		
 		//test_createTask();
-		test_editTask();
+		//test_editTask();
 	}
 	
 }
