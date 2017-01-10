@@ -12,7 +12,7 @@
 
 
 [template public generateUserDao(aClass : Class)]
-[if (aClass.hasStereotype('RootElement::UserDao'))]
+[if (aClass.hasStereotype('RootElement::Dao'))]
 [file (aClass.genFullPathFile(), false, 'UTF-8')]
 [aClass.genFileContent()/]
 [/file]
@@ -27,9 +27,9 @@
 
 [aClass.genPackageDeclaration()/]
 
-import java.sql.*;
-import java.util.List;
-import java.util.ArrayList;
+// [protected ('(user defined imports)')]
+
+// [/protected]
 
 [aClass.genBody()/]
 

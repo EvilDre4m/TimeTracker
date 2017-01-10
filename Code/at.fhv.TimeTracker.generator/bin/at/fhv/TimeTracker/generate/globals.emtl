@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="user_dao" nsURI="at::fhv::TimeTracker::generate::user_dao" startHeaderPosition="30" endHeaderPosition="140">
+  <mtl:Module name="globals" nsURI="at::fhv::TimeTracker::generate::globals" startHeaderPosition="30" endHeaderPosition="139">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
     </input>
@@ -12,14 +12,14 @@
     <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0"/>
     <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Comment">
-      <body startPosition="440" endPosition="528" value=" it is important to import the extended class, otherwise the methods cannot be resolved "/>
+      <body startPosition="439" endPosition="527" value=" it is important to import the extended class, otherwise the methods cannot be resolved "/>
     </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Template" name="generateUserDao" visibility="Public">
+    <ownedModuleElement xsi:type="mtl:Template" name="generateGlobals" visibility="Public">
       <body xsi:type="mtl:IfBlock">
         <body xsi:type="mtl:FileBlock" openMode="OverWrite">
           <body xsi:type="mtl:TemplateInvocation" definition="/0/genFileContent">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateUserDao/aClass">
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateGlobals/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
           </body>
@@ -27,7 +27,7 @@
           <fileUrl xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genFullPathFile"/>
-            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateUserDao/aClass">
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateGlobals/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
           </fileUrl>
@@ -38,10 +38,10 @@
         <ifExpr xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
           <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/hasStereotype"/>
-          <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateUserDao/aClass">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateGlobals/aClass">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
           </argument>
-          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="RootElement::Dao">
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="RootElement::Globals">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
         </ifExpr>
@@ -51,7 +51,6 @@
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="genFileContent" visibility="Protected">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genPackageDeclaration"/>
@@ -59,14 +58,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;// "/>
-      <body xsi:type="mtl:ProtectedAreaBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;// "/>
-        <marker xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(user defined imports)">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </marker>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;import at.fhv.TimeTracker.project.ProjectDAO;&#xD;&#xA;import at.fhv.TimeTracker.task.TaskDAO;&#xD;&#xA;import at.fhv.TimeTracker.user.UserDAO;&#xD;&#xA;&#xD;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation" definition="/0/genBody">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genFileContent/aClass">
@@ -75,7 +67,7 @@
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="806" endPosition="914" value="&#xD;&#xA;Generate the java file content&#xD;&#xA;@param aClass The class for which a java file should be generated&#xD;&#xA;&#xD;&#xA;"/>
+        <body startPosition="809" endPosition="917" value="&#xD;&#xA;Generate the java file content&#xD;&#xA;@param aClass The class for which a java file should be generated&#xD;&#xA;&#xD;&#xA;"/>
         <parametersDocumentation name="aClass">
           <body value=" The class for which a java file should be generated"/>
         </parametersDocumentation>
@@ -87,6 +79,7 @@
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="genBody" visibility="Protected">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genVisibility"/>
@@ -130,7 +123,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xD;&#xA;&#x9;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xD;&#xA;&#x9;/*&#xD;&#xA;&#x9; * This collection of the three used DAO's was introduced to provide a globally accessible spot that holds all three DAO's.&#xD;&#xA;&#x9; * Before setting up this class, they have been included as private members in other classes. The core problem with that was&#xD;&#xA;&#x9; * e.g. the UserDAO was needed in the other two DAO's, which caused a plethora of circular dependencies and includes, ultimately&#xD;&#xA;&#x9; * leading to stack overflow (not the website). A different solution using another abstraction layer was considered&#xD;&#xA;&#x9; * but deemed to time demanding for this project.&#xD;&#xA;&#x9; */&#xD;&#xA;    "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/attributes.emtl#/0/genAttributes.1"/>
@@ -138,17 +131,9 @@
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
-      <body xsi:type="mtl:TemplateInvocation">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genOperations"/>
-        <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
-        </argument>
-      </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;}"/>
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="1140" endPosition="1216" value="&#xD;&#xA;Generate the java class code&#xD;&#xA;@param aClass The class to generate&#xD;&#xA;&#xD;&#xA;"/>
+        <body startPosition="1208" endPosition="1284" value="&#xD;&#xA;Generate the java class code&#xD;&#xA;@param aClass The class to generate&#xD;&#xA;&#xD;&#xA;"/>
         <parametersDocumentation name="aClass">
           <body value=" The class to generate"/>
         </parametersDocumentation>
@@ -180,11 +165,11 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
       </eAnnotations>
-      <eOperations name="generateUserDao">
+      <eOperations name="generateGlobals">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
-        <eAnnotations source="MTL" references="/0/generateUserDao"/>
+        <eAnnotations source="MTL" references="/0/generateGlobals"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
@@ -232,18 +217,6 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aNamedElement">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//NamedElement"/>
-        </eParameters>
-      </eOperations>
-      <eOperations name="genOperations">
-        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-          <contents xsi:type="ocl.ecore:Constraint"/>
-        </eAnnotations>
-        <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genOperations"/>
-        </eAnnotations>
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="aClass">
-          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </eParameters>
       </eOperations>
       <eOperations name="genInheritance">
@@ -480,9 +453,6 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -516,276 +486,238 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/%">
-      <details key="start" value="432"/>
-      <details key="end" value="530"/>
+      <details key="start" value="431"/>
+      <details key="end" value="529"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1" references="/0/generateUserDao">
-      <details key="start" value="593"/>
-      <details key="end" value="799"/>
+    <eAnnotations source="positions.1" references="/0/generateGlobals">
+      <details key="start" value="592"/>
+      <details key="end" value="802"/>
       <details key="line" value="14"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateUserDao/%">
-      <details key="start" value="644"/>
-      <details key="end" value="786"/>
+    <eAnnotations source="positions.2" references="/0/generateGlobals/%">
+      <details key="start" value="643"/>
+      <details key="end" value="789"/>
       <details key="line" value="15"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateUserDao/%/%">
-      <details key="start" value="693"/>
-      <details key="end" value="779"/>
+    <eAnnotations source="positions.3" references="/0/generateGlobals/%/%">
+      <details key="start" value="696"/>
+      <details key="end" value="782"/>
       <details key="line" value="16"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateUserDao/%/%/%">
-      <details key="start" value="745"/>
-      <details key="end" value="768"/>
+    <eAnnotations source="positions.4" references="/0/generateGlobals/%/%/%">
+      <details key="start" value="748"/>
+      <details key="end" value="771"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateUserDao/%/%/%/aClass">
-      <details key="start" value="745"/>
-      <details key="end" value="751"/>
+    <eAnnotations source="positions.5" references="/0/generateGlobals/%/%/%/aClass">
+      <details key="start" value="748"/>
+      <details key="end" value="754"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateUserDao/%/%/%.1">
-      <details key="start" value="770"/>
-      <details key="end" value="772"/>
+    <eAnnotations source="positions.6" references="/0/generateGlobals/%/%/%.1">
+      <details key="start" value="773"/>
+      <details key="end" value="775"/>
       <details key="line" value="18"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateUserDao/%/%/%.2">
-      <details key="start" value="700"/>
-      <details key="end" value="724"/>
+    <eAnnotations source="positions.7" references="/0/generateGlobals/%/%/%.2">
+      <details key="start" value="703"/>
+      <details key="end" value="727"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateUserDao/%/%/%.2/aClass">
-      <details key="start" value="700"/>
-      <details key="end" value="706"/>
+    <eAnnotations source="positions.8" references="/0/generateGlobals/%/%/%.2/aClass">
+      <details key="start" value="703"/>
+      <details key="end" value="709"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateUserDao/%/%/%.3">
-      <details key="start" value="733"/>
-      <details key="end" value="740"/>
+    <eAnnotations source="positions.9" references="/0/generateGlobals/%/%/%.3">
+      <details key="start" value="736"/>
+      <details key="end" value="743"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateUserDao/%/%.1">
+    <eAnnotations source="positions.10" references="/0/generateGlobals/%/%.1">
+      <details key="start" value="647"/>
+      <details key="end" value="693"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateGlobals/%/%.1/aClass">
       <details key="start" value="648"/>
-      <details key="end" value="690"/>
+      <details key="end" value="654"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateUserDao/%/%.1/aClass">
-      <details key="start" value="649"/>
-      <details key="end" value="655"/>
+    <eAnnotations source="positions.12" references="/0/generateGlobals/%/%.1/%">
+      <details key="start" value="669"/>
+      <details key="end" value="691"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateUserDao/%/%.1/%">
-      <details key="start" value="670"/>
-      <details key="end" value="688"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateUserDao/aClass">
-      <details key="start" value="626"/>
-      <details key="end" value="640"/>
+    <eAnnotations source="positions.13" references="/0/generateGlobals/aClass">
+      <details key="start" value="625"/>
+      <details key="end" value="639"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/genFileContent">
-      <details key="start" value="918"/>
-      <details key="end" value="1133"/>
+      <details key="start" value="921"/>
+      <details key="end" value="1201"/>
       <details key="line" value="26"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/genFileContent/%">
-      <details key="start" value="996"/>
-      <details key="end" value="998"/>
-      <details key="line" value="27"/>
-    </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/genFileContent/%.1">
-      <details key="start" value="999"/>
-      <details key="end" value="1029"/>
+      <details key="start" value="1000"/>
+      <details key="end" value="1030"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/genFileContent/%.1/aClass">
-      <details key="start" value="999"/>
-      <details key="end" value="1005"/>
+    <eAnnotations source="positions.16" references="/0/genFileContent/%/aClass">
+      <details key="start" value="1000"/>
+      <details key="end" value="1006"/>
       <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/genFileContent/%.1">
+      <details key="start" value="1032"/>
+      <details key="end" value="1167"/>
+      <details key="line" value="28"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/genFileContent/%.2">
-      <details key="start" value="1031"/>
-      <details key="end" value="1038"/>
-      <details key="line" value="29"/>
-    </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/genFileContent/%.3">
-      <details key="start" value="1038"/>
-      <details key="end" value="1095"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/genFileContent/%.3/%">
-      <details key="start" value="1076"/>
-      <details key="end" value="1083"/>
-      <details key="line" value="31"/>
-    </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/genFileContent/%.3/%.1">
-      <details key="start" value="1050"/>
-      <details key="end" value="1074"/>
+      <details key="start" value="1168"/>
+      <details key="end" value="1184"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/genFileContent/%.4">
-      <details key="start" value="1095"/>
-      <details key="end" value="1099"/>
-      <details key="line" value="33"/>
-    </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/genFileContent/%.5">
-      <details key="start" value="1100"/>
-      <details key="end" value="1116"/>
+    <eAnnotations source="positions.19" references="/0/genFileContent/%.2/aClass">
+      <details key="start" value="1168"/>
+      <details key="end" value="1174"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/genFileContent/%.5/aClass">
-      <details key="start" value="1100"/>
-      <details key="end" value="1106"/>
+    <eAnnotations source="positions.20" references="/0/genFileContent/%.3">
+      <details key="start" value="1186"/>
+      <details key="end" value="1188"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/genFileContent/%.4">
+      <details key="start" value="806"/>
+      <details key="end" value="919"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/genFileContent/%.6">
-      <details key="start" value="1118"/>
-      <details key="end" value="1120"/>
-      <details key="line" value="35"/>
-    </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/genFileContent/%.7">
-      <details key="start" value="803"/>
-      <details key="end" value="916"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/genFileContent/%.7/aClass">
+    <eAnnotations source="positions.22" references="/0/genFileContent/%.4/aClass">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/genFileContent/aClass">
-      <details key="start" value="953"/>
-      <details key="end" value="967"/>
+    <eAnnotations source="positions.23" references="/0/genFileContent/aClass">
+      <details key="start" value="956"/>
+      <details key="end" value="970"/>
       <details key="line" value="26"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/genBody">
-      <details key="start" value="1220"/>
-      <details key="end" value="1512"/>
+    <eAnnotations source="positions.24" references="/0/genBody">
+      <details key="start" value="1288"/>
+      <details key="end" value="2122"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/genBody/%">
+      <details key="start" value="1352"/>
+      <details key="end" value="1354"/>
       <details key="line" value="42"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/genBody/%">
-      <details key="start" value="1285"/>
-      <details key="end" value="1307"/>
+    <eAnnotations source="positions.26" references="/0/genBody/%.1">
+      <details key="start" value="1355"/>
+      <details key="end" value="1377"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/genBody/%/aClass">
-      <details key="start" value="1285"/>
-      <details key="end" value="1291"/>
+    <eAnnotations source="positions.27" references="/0/genBody/%.1/aClass">
+      <details key="start" value="1355"/>
+      <details key="end" value="1361"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/genBody/%.1">
-      <details key="start" value="1310"/>
-      <details key="end" value="1330"/>
+    <eAnnotations source="positions.28" references="/0/genBody/%.2">
+      <details key="start" value="1380"/>
+      <details key="end" value="1400"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/genBody/%.1/aClass">
-      <details key="start" value="1310"/>
-      <details key="end" value="1316"/>
+    <eAnnotations source="positions.29" references="/0/genBody/%.2/aClass">
+      <details key="start" value="1380"/>
+      <details key="end" value="1386"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/genBody/%.2">
-      <details key="start" value="1333"/>
-      <details key="end" value="1350"/>
+    <eAnnotations source="positions.30" references="/0/genBody/%.3">
+      <details key="start" value="1403"/>
+      <details key="end" value="1420"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/genBody/%.2/aClass">
-      <details key="start" value="1333"/>
-      <details key="end" value="1339"/>
+    <eAnnotations source="positions.31" references="/0/genBody/%.3/aClass">
+      <details key="start" value="1403"/>
+      <details key="end" value="1409"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/genBody/%.3">
-      <details key="start" value="1352"/>
-      <details key="end" value="1358"/>
+    <eAnnotations source="positions.32" references="/0/genBody/%.4">
+      <details key="start" value="1422"/>
+      <details key="end" value="1428"/>
       <details key="line" value="43"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/genBody/%.4">
-      <details key="start" value="1359"/>
-      <details key="end" value="1375"/>
+    <eAnnotations source="positions.33" references="/0/genBody/%.5">
+      <details key="start" value="1429"/>
+      <details key="end" value="1445"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/genBody/%.4/aClass">
-      <details key="start" value="1359"/>
-      <details key="end" value="1365"/>
+    <eAnnotations source="positions.34" references="/0/genBody/%.5/aClass">
+      <details key="start" value="1429"/>
+      <details key="end" value="1435"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/genBody/%.5">
-      <details key="start" value="1378"/>
-      <details key="end" value="1401"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/genBody/%.5/aClass">
-      <details key="start" value="1378"/>
-      <details key="end" value="1384"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/genBody/%.6">
-      <details key="start" value="1404"/>
-      <details key="end" value="1436"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/genBody/%.6/aClass">
-      <details key="start" value="1404"/>
-      <details key="end" value="1410"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/genBody/%.7">
-      <details key="start" value="1438"/>
-      <details key="end" value="1443"/>
-      <details key="line" value="43"/>
-    </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/genBody/%.8">
-      <details key="start" value="1444"/>
-      <details key="end" value="1466"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/genBody/%.8/aClass">
-      <details key="start" value="1444"/>
-      <details key="end" value="1450"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/genBody/%.9">
-      <details key="start" value="1468"/>
+    <eAnnotations source="positions.35" references="/0/genBody/%.6">
+      <details key="start" value="1448"/>
       <details key="end" value="1471"/>
-      <details key="line" value="45"/>
-    </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/genBody/%.10">
-      <details key="start" value="1472"/>
-      <details key="end" value="1494"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/genBody/%.10/aClass">
-      <details key="start" value="1472"/>
-      <details key="end" value="1478"/>
+    <eAnnotations source="positions.36" references="/0/genBody/%.6/aClass">
+      <details key="start" value="1448"/>
+      <details key="end" value="1454"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/genBody/%.11">
-      <details key="start" value="1496"/>
-      <details key="end" value="1499"/>
-      <details key="line" value="46"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/genBody/%.12">
-      <details key="start" value="1137"/>
-      <details key="end" value="1218"/>
+    <eAnnotations source="positions.37" references="/0/genBody/%.7">
+      <details key="start" value="1474"/>
+      <details key="end" value="1506"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/genBody/%.12/aClass">
+    <eAnnotations source="positions.38" references="/0/genBody/%.7/aClass">
+      <details key="start" value="1474"/>
+      <details key="end" value="1480"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/genBody/%.8">
+      <details key="start" value="1508"/>
+      <details key="end" value="2081"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/genBody/%.9">
+      <details key="start" value="2082"/>
+      <details key="end" value="2104"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/genBody/%.9/aClass">
+      <details key="start" value="2082"/>
+      <details key="end" value="2088"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/genBody/%.10">
+      <details key="start" value="2106"/>
+      <details key="end" value="2109"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/genBody/%.11">
+      <details key="start" value="1205"/>
+      <details key="end" value="1286"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/genBody/%.11/aClass">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/genBody/aClass">
-      <details key="start" value="1248"/>
-      <details key="end" value="1262"/>
-      <details key="line" value="42"/>
+    <eAnnotations source="positions.45" references="/0/genBody/aClass">
+      <details key="start" value="1316"/>
+      <details key="end" value="1330"/>
+      <details key="line" value="41"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

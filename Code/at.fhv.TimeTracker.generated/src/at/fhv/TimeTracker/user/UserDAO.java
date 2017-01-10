@@ -1,9 +1,10 @@
 
 package at.fhv.TimeTracker.user;
 
+// Start of user code (user defined imports)
 import java.sql.*;
-import java.util.List;
 import java.util.ArrayList;
+// End of user code
 
 public class UserDAO {
 	// Start of user code (user defined attributes)
@@ -11,33 +12,42 @@ public class UserDAO {
 	Statement stmt = null;
 	// End of user code
 	
-	private Boolean init() {
+	public User getUserByID(Integer id) {
+	// Start of user code getUserByID
+		ArrayList<User> allUsers = getAllUsers();
+		for(User entry : allUsers){
+			if(entry.getId() == id){
+				return entry;
+			}
+		}
+		return null;
+	// End of user code
+	}
+	
+	private void init() {
 	// Start of user code init
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			return false;
 		}
 		
 		try {
 			c = DriverManager.getConnection("jdbc:sqlite:timetracker.db");
 			c.setAutoCommit(true);
 			stmt = c.createStatement();
-			String sqlCreateTable = "CREATE TABLE IF NOT EXTSTS Users" +
-									"(ID INT PRIMARY KEY	NOT NULL" +
-									"FIRSTNAME		TEXT	NOT NULL" +
-									"LASTNAME		TEXT	NOT NULL" +
-									"EMAIL			TEXT	NOT NULL" +
+			String sqlCreateTable = "CREATE TABLE IF NOT EXISTS Users" +
+									"(ID INT PRIMARY KEY	NOT NULL, " +
+									"FIRSTNAME		TEXT	NOT NULL, " +
+									"LASTNAME		TEXT	NOT NULL, " +
+									"EMAIL			TEXT	NOT NULL, " +
 									"PASSWORD		TEXT	NOT NULL)";
 			stmt.executeUpdate(sqlCreateTable);
 			stmt.close();
 			stmt = null;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return false;
 		}
-		return true;
 	// End of user code
 	}
 	
@@ -59,19 +69,20 @@ public class UserDAO {
 			stmt = null;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return -1;
 		}
 		
 		return 0;
 	// End of user code
 	}
 	
-	public List<User> getAllUsers() {
+	public ArrayList<User> getAllUsers() {
 	// Start of user code getAllUsers
 		if(c == null){
 			init();
 		}
 		
-		List<User> users = new ArrayList<>();
+		ArrayList<User> users = new ArrayList<>();
 		
 		try {
 			stmt = c.createStatement();

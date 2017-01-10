@@ -12,7 +12,7 @@
 
 
 [template public generateUser(aClass : Class)]
-[if (aClass.hasStereotype('RootElement::User'))]
+[if (aClass.hasStereotype('RootElement::Main'))]
 [file (aClass.genFullPathFile(), false, 'UTF-8')]
 [aClass.genFileContent()/]
 [/file]
@@ -25,6 +25,10 @@
 */]
 [template protected genFileContent(aClass : Class) overrides genFileContent]
 [aClass.genPackageDeclaration()/]
+
+// [protected ('(user defined imports)')]
+
+// [/protected]
 
 [aClass.genBody()/]
 
@@ -57,6 +61,12 @@
 public [aClass.genName()/]([for (aProperty : Property | aClass.ownedAttribute->union(aClass.getOutgoingNavigableOwnedEnd())) separator(', ')][aProperty.genType()/] [aProperty.genName()/][/for]){
 	[for (aProperty : Property | aClass.ownedAttribute->union(aClass.getOutgoingNavigableOwnedEnd()))]
 	this.set[aProperty.genName().toUpperFirst()/]([aProperty.genName()/]);
+	[/for]
+}
+
+public [aClass.genName()/]([aClass.genName()/] [aClass.genName().toLowerFirst()/]){
+	[for (aProperty : Property | aClass.ownedAttribute->union(aClass.getOutgoingNavigableOwnedEnd()))]
+	this.set[aProperty.genName().toUpperFirst()/]([aClass.genName().toLowerFirst()/].get[aProperty.genName().toUpperFirst()/]());
 	[/for]
 }
 [/template]

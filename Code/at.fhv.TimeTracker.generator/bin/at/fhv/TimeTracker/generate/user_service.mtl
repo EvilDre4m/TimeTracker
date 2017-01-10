@@ -12,7 +12,7 @@
 
 
 [template public generateUserService(aClass : Class)]
-[if (aClass.hasStereotype('RootElement::UserService'))]
+[if (aClass.hasStereotype('RootElement::Service'))]
 [file (aClass.genFullPathFile(), false, 'UTF-8')]
 [aClass.genFileContent()/]
 [/file]
@@ -27,17 +27,9 @@
 
 [aClass.genPackageDeclaration()/]
 
-import javax.websocket.server.PathParam;
-import javax.ws.rs.GET;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.core.MediaType;
+// [protected ('(user defined imports)')]
 
-import at.fhv.TimeTracker.user.User;
-import at.fhv.TimeTracker.user.UserDAO;;
+// [/protected]
 
 [aClass.genBody()/]
 

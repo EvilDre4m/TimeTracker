@@ -5,6 +5,7 @@
 [import at::fhv::TimeTracker::generate::user_dao /]
 [import at::fhv::TimeTracker::generate::user_service /]
 [import at::fhv::TimeTracker::generate::timeStamp /]
+[import at::fhv::TimeTracker::generate::globals /]
 
 
 [template public main(aModel : Model)]
@@ -15,6 +16,7 @@
 		[aClass.generateUserDao()/]
 		[aClass.generateUserService()/]
 		[aClass.generateTimestamp()/]
+		[aClass.generateGlobals()/]
 	[/for]
 [/for]
 

@@ -1,5 +1,9 @@
 package at.fhv.TimeTracker.user;
 
+// Start of user code (user defined imports)
+
+// End of user code
+
 public class User {
 	/**
 	 * Description of the property id.
@@ -40,6 +44,14 @@ public class User {
 		this.setLastName(lastName);
 		this.setEmail(email);
 		this.setPassword(password);
+	}
+	
+	public User(User user){
+		this.setId(user.getId());
+		this.setFirstName(user.getFirstName());
+		this.setLastName(user.getLastName());
+		this.setEmail(user.getEmail());
+		this.setPassword(user.getPassword());
 	}
 
 

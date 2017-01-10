@@ -26,7 +26,7 @@ void
 [elseif (aProperty.isArray())]
 [aProperty.genTypeName()/]['['/][']'/] 
 [else]
-[aProperty.genCollectionType()/]<[aProperty.genTypeName()/]>
+[aProperty.genCollectionImplType()/]<[aProperty.genTypeName()/]>
 [/if]
 [/template]
 
@@ -40,7 +40,7 @@ void
 [elseif (aParameter.isArray())]
     [aParameter.genTypeName()/]['['/][']'/]
 [else]
-    [aParameter.genCollectionType()/]<[aParameter.genTypeName()/]>
+    [aParameter.genCollectionImplType()/]<[aParameter.genTypeName()/]>
 [/if]
 [/template]
 

@@ -141,7 +141,7 @@
     [/if]
 [else]
     [if (not aProperty.default.oclIsUndefined())]        
-        new  [aProperty.genType()/]()
+        new [aProperty.genType()/]()
     [else]
         new [aProperty.genType()/]()
     [/if]
