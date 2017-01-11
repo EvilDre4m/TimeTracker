@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
  *
  * @generated
  */
-public class User extends AbstractAcceleoGenerator {
+public class Main_gen extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
@@ -65,7 +65,7 @@ public class User extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public User() {
+    public Main_gen() {
         // Empty implementation
     }
 
@@ -85,7 +85,7 @@ public class User extends AbstractAcceleoGenerator {
      *             the model cannot be loaded.
      * @generated
      */
-    public User(URI modelURI, File targetFolder,
+    public Main_gen(URI modelURI, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(modelURI, targetFolder, arguments);
     }
@@ -106,7 +106,7 @@ public class User extends AbstractAcceleoGenerator {
      *             This can be thrown in two scenarios : the module cannot be found, or it cannot be loaded.
      * @generated
      */
-    public User(EObject model, File targetFolder,
+    public Main_gen(EObject model, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(model, targetFolder, arguments);
     }
@@ -141,7 +141,7 @@ public class User extends AbstractAcceleoGenerator {
                  * add in "arguments" this "String" attribute.
                  */
                 
-                User generator = new User(modelURI, folder, arguments);
+                Main_gen generator = new Main_gen(modelURI, folder, arguments);
                 
                 /*
                  * Add the properties from the launch arguments.

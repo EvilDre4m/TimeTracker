@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="at.fhv.TimeTracker.generator">
-    <property name="ECLIPSE_HOME" value="../../../eclipse/jee-oxygen/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_HOME" value="../../../../../eclipse/jee-oxygen/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../workspace_oxygen"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="at.fhv.TimeTracker.generator.libraryclasspath">

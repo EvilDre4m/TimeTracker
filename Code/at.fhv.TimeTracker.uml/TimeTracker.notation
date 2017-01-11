@@ -625,7 +625,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rGuyk856Eea-xsdGgVp_8A"/>
       </children>
       <element xmi:type="uml:Package" href="TimeTracker.uml#_rGtkcM56Eea-xsdGgVp_8A"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rGuLgc56Eea-xsdGgVp_8A" x="-17" y="686" width="707"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rGuLgc56Eea-xsdGgVp_8A" x="18" y="581" width="707"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_dpt7QLe6EeaH071aJO2UFw" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_dpt7Qbe6EeaH071aJO2UFw"/>

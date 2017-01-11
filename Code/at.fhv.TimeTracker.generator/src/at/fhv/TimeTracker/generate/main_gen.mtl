@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module user('http://www.eclipse.org/uml2/5.0.0/UML') extends at::fhv::TimeTracker::java::files::classFile/]
+[module main_gen('http://www.eclipse.org/uml2/5.0.0/UML') extends at::fhv::TimeTracker::java::files::classFile/]
 
 [import at::fhv::TimeTracker::java::common::attributes /]
 [import at::fhv::TimeTracker::java::common::common /]
@@ -11,7 +11,7 @@
 [import at::fhv::TimeTracker::java::files::classFile /]
 
 
-[template public generateUser(aClass : Class)]
+[template public generateMain(aClass : Class)]
 [if (aClass.hasStereotype('RootElement::Main'))]
 [file (aClass.genFullPathFile(), false, 'UTF-8')]
 [aClass.genFileContent()/]

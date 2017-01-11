@@ -4,13 +4,13 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
     </input>
-    <extends href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/attributes.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0"/>
-    <imports href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0"/>
+    <extends href="../java/files/classFile.emtl#/0"/>
+    <imports href="../java/common/attributes.emtl#/0"/>
+    <imports href="../java/common/common.emtl#/0"/>
+    <imports href="../java/common/declaration.emtl#/0"/>
+    <imports href="../java/request/request.emtl#/0"/>
+    <imports href="../java/common/type.emtl#/0"/>
+    <imports href="../java/files/classFile.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Comment">
       <body startPosition="441" endPosition="529" value=" it is important to import the extended class, otherwise the methods cannot be resolved "/>
     </ownedModuleElement>
@@ -26,7 +26,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
           <fileUrl xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genFullPathFile"/>
+            <definition href="../java/files/commonFile.emtl#/0/genFullPathFile"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateTimestamp/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -37,7 +37,7 @@
         </body>
         <ifExpr xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/hasStereotype"/>
+          <definition href="../java/request/request.emtl#/0/hasStereotype"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateTimestamp/aClass">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
           </argument>
@@ -53,7 +53,7 @@
     <ownedModuleElement xsi:type="mtl:Template" name="genFileContent" visibility="Protected">
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genPackageDeclaration"/>
+        <definition href="../java/files/commonFile.emtl#/0/genPackageDeclaration"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genFileContent/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -72,8 +72,8 @@
           <body value=" The class for which a java file should be generated"/>
         </parametersDocumentation>
       </documentation>
-      <overrides href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0/genFileContent"/>
-      <overrides href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genFileContent"/>
+      <overrides href="../java/files/classFile.emtl#/0/genFileContent"/>
+      <overrides href="../java/files/commonFile.emtl#/0/genFileContent"/>
       <parameter name="aClass">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
       </parameter>
@@ -81,21 +81,21 @@
     <ownedModuleElement xsi:type="mtl:Template" name="genBody" visibility="Protected">
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genVisibility"/>
+        <definition href="../java/common/declaration.emtl#/0/genVisibility"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genAbstract"/>
+        <definition href="../java/common/declaration.emtl#/0/genAbstract"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genFinal"/>
+        <definition href="../java/common/declaration.emtl#/0/genFinal"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -103,21 +103,21 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="class "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+        <definition href="../java/common/common.emtl#/0/genName"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genInheritance"/>
+        <definition href="../java/common/declaration.emtl#/0/genInheritance"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genInterfaceRealization"/>
+        <definition href="../java/common/declaration.emtl#/0/genInterfaceRealization"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -125,7 +125,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xD;&#xA;    "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/attributes.emtl#/0/genAttributes.1"/>
+        <definition href="../java/common/attributes.emtl#/0/genAttributes.1"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -133,7 +133,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;&#x9;public "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+        <definition href="../java/common/common.emtl#/0/genName"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -142,7 +142,7 @@
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0/genType"/>
+          <definition href="../java/common/type.emtl#/0/genType"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genBody/%.12/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -150,7 +150,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genBody/%.12/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -166,7 +166,7 @@
             <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier/ownedAttribute"/>
           </source>
           <argument xsi:type="mtl:QueryInvocation" eType="/28/Set(Property)">
-            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
+            <definition href="../java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -182,7 +182,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;String pattern = &quot;^\\d{2}\\.\\d{2}\\.\\d{2} \\d{2}:\\d{2}&quot;;&#xD;&#xA;&#x9;&#x9;if("/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genBody/%.14/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -204,7 +204,7 @@
         </body>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genBody/%.14/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -212,7 +212,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = "/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genBody/%.14/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -229,7 +229,7 @@
             <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier/ownedAttribute"/>
           </source>
           <argument xsi:type="mtl:QueryInvocation" eType="/28/Set(Property)">
-            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
+            <definition href="../java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -247,7 +247,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genOperations"/>
+        <definition href="../java/common/declaration.emtl#/0/genOperations"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genBody/aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </argument>
@@ -259,8 +259,8 @@
           <body value=" The class to generate"/>
         </parametersDocumentation>
       </documentation>
-      <overrides href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0/genBody"/>
-      <overrides href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genBody"/>
+      <overrides href="../java/files/classFile.emtl#/0/genBody"/>
+      <overrides href="../java/files/commonFile.emtl#/0/genBody"/>
       <parameter name="aClass">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
       </parameter>
@@ -286,7 +286,7 @@
             <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/5.0.0/UML#//StructuredClassifier/ownedAttribute"/>
           </source>
           <argument xsi:type="mtl:QueryInvocation" eType="/28/Set(Property)">
-            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
+            <definition href="../java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/genAccessors/aClass">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
             </argument>
@@ -294,7 +294,7 @@
           <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/union.1"/>
         </iterSet>
       </body>
-      <overrides href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/classFile.emtl#/0/genAccessors"/>
+      <overrides href="../java/files/classFile.emtl#/0/genAccessors"/>
       <parameter name="aClass">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
       </parameter>
@@ -313,7 +313,7 @@
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0/genType"/>
+        <definition href="../java/common/type.emtl#/0/genType"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
         </argument>
@@ -323,7 +323,7 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -346,7 +346,7 @@
       </body>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+        <definition href="../java/common/common.emtl#/0/genName"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
         </argument>
@@ -369,7 +369,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:TemplateInvocation">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+            <definition href="../java/common/common.emtl#/0/genName"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
             </argument>
@@ -378,7 +378,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0/genType"/>
+          <definition href="../java/common/type.emtl#/0/genType"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -386,7 +386,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -394,7 +394,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") throws IllegalArgumentException{&#xD;&#xA;&#x9;String pattern = &quot;^\\d{2}\\.\\d{2}\\.\\d{2} \\d{2}:\\d{2}&quot;;&#xD;&#xA;&#x9;if("/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -416,7 +416,7 @@
         </body>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -424,7 +424,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = "/>
         <body xsi:type="mtl:TemplateInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <definition href="../java/common/common.emtl#/0/genName"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/genAccessors.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </argument>
@@ -532,7 +532,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/attributes.emtl#/0/genAttributes.1"/>
+          <references href="../java/common/attributes.emtl#/0/genAttributes.1"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -544,7 +544,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/common.emtl#/0/genName"/>
+          <references href="../java/common/common.emtl#/0/genName"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aNamedElement">
@@ -556,7 +556,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genOperations"/>
+          <references href="../java/common/declaration.emtl#/0/genOperations"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -568,7 +568,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genInheritance"/>
+          <references href="../java/common/declaration.emtl#/0/genInheritance"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClassifier">
@@ -580,7 +580,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genInterfaceRealization"/>
+          <references href="../java/common/declaration.emtl#/0/genInterfaceRealization"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -592,7 +592,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genVisibility"/>
+          <references href="../java/common/declaration.emtl#/0/genVisibility"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aNamedElement">
@@ -604,7 +604,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genAbstract"/>
+          <references href="../java/common/declaration.emtl#/0/genAbstract"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClass">
@@ -616,7 +616,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/declaration.emtl#/0/genFinal"/>
+          <references href="../java/common/declaration.emtl#/0/genFinal"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aRedefinableElement">
@@ -628,7 +628,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/hasStereotype"/>
+          <references href="../java/request/request.emtl#/0/hasStereotype"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
         <eParameters name="anElement">
@@ -643,9 +643,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
+          <references href="../java/request/request.emtl#/0/getOutgoingNavigableOwnedEnd"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:SetType" href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/request/request.emtl#/3/Set(Property)"/>
+        <eType xsi:type="ocl.ecore:SetType" href="../java/request/request.emtl#/3/Set(Property)"/>
         <eParameters name="aClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
         </eParameters>
@@ -655,7 +655,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/common/type.emtl#/0/genType"/>
+          <references href="../java/common/type.emtl#/0/genType"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aProperty">
@@ -667,7 +667,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genFileContent"/>
+          <references href="../java/files/commonFile.emtl#/0/genFileContent"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClassifier">
@@ -679,7 +679,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/at.fhv.TimeTracker.generator/bin/at/fhv/TimeTracker/java/files/commonFile.emtl#/0/genBody"/>
+          <references href="../java/files/commonFile.emtl#/0/genBody"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aClassifier">

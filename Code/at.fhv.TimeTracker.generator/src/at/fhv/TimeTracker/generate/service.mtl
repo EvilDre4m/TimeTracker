@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module user_dao('http://www.eclipse.org/uml2/5.0.0/UML') extends at::fhv::TimeTracker::java::files::classFile/]
+[module service('http://www.eclipse.org/uml2/5.0.0/UML') extends at::fhv::TimeTracker::java::files::classFile/]
 
 [import at::fhv::TimeTracker::java::common::attributes /]
 [import at::fhv::TimeTracker::java::common::common /]
@@ -11,8 +11,8 @@
 [import at::fhv::TimeTracker::java::files::classFile /]
 
 
-[template public generateUserDao(aClass : Class)]
-[if (aClass.hasStereotype('RootElement::Dao'))]
+[template public generateService(aClass : Class)]
+[if (aClass.hasStereotype('RootElement::Service'))]
 [file (aClass.genFullPathFile(), false, 'UTF-8')]
 [aClass.genFileContent()/]
 [/file]
@@ -40,8 +40,10 @@
  * @param aClass The class to generate
 */]
 [template protected genBody(aClass : Class) overrides genBody]
+@Path("/[aClass.genName()/]")
 [aClass.genVisibility()/][aClass.genAbstract()/][aClass.genFinal()/]class [aClass.genName()/][aClass.genInheritance()/][aClass.genInterfaceRealization()/] {
 	[aClass.genAttributes()/]
+	
 	[aClass.genOperations()/]
 }
 [/template]
